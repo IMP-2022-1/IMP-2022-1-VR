@@ -237,15 +237,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013096799518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f61dcfd7077c46509132f92d2df65fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 371bc76237eff4f43935fbd62ac86874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _topology: 10
+  _topology: 1
   _detail: 10
   _level: 1
-  _liquidColor1: {r: 1, g: 0, b: 0.041718483, a: 0.1}
+  _liquidColor1: {r: 0.9433962, g: 0.18982387, b: 0.18244925, a: 0.1}
   _liquidScale1: 1
-  _liquidColor2: {r: 1, g: 0, b: 0.3120966, a: 0.3}
+  _liquidColor2: {r: 1, g: 0, b: 0, a: 0.3}
   _liquidScale2: 5
   _alpha: 1
   _emissionColor: {r: 0, g: 0, b: 0, a: 1}
@@ -262,12 +262,12 @@ MonoBehaviour:
   _foamColor: {r: 1, g: 1, b: 1, a: 0.65}
   _foamScale: 0.2
   _foamThickness: 0.04
-  _foamDensity: -0.198
+  _foamDensity: 0.5
   _foamWeight: 10
   _foamTurbulence: 1
   _foamVisibleFromBottom: 1
   _smokeEnabled: 1
-  _smokeColor: {r: 1, g: 1, b: 1, a: 0.07}
+  _smokeColor: {r: 0.7, g: 0.7, b: 0.7, a: 0.25}
   _smokeScale: 0.25
   _smokeBaseObscurance: 2
   _smokeSpeed: 5
@@ -275,17 +275,17 @@ MonoBehaviour:
   originalMesh: {fileID: 0}
   originalPivotOffset: {x: 0, y: 0, z: 0}
   _pivotOffset: {x: 0, y: 0, z: 0}
-  _upperLimit: 0.779
-  _lowerLimit: -1
+  _upperLimit: 1.5
+  _lowerLimit: -1.5
   _subMeshIndex: 0
   _flaskTint: {r: 0, g: 0, b: 0, a: 1}
-  _flaskThickness: 0.078
+  _flaskThickness: 0.03
   _flaskGlossinessExternal: 0.767
   _flaskGlossinessInternal: 0.5
   _scatteringEnabled: 0
   _scatteringPower: 5
   _scatteringAmount: 0.3
-  _refractionBlur: 0
+  _refractionBlur: 1
   _blurIntensity: 0.75
   _liquidRaySteps: 10
   _foamRaySteps: 7
@@ -299,14 +299,14 @@ MonoBehaviour:
   _textureOffset: {x: 0, y: 0}
   _distortionAmount: 1
   _depthAware: 0
-  _depthAwareOffset: 50
+  _depthAwareOffset: 0
   _depthAwareCustomPass: 0
-  _doubleSidedBias: 0.01
+  _doubleSidedBias: 0.001
   _rotationLevelBias: 0
   _ignoreGravity: 0
   _reactToForces: 0
   _textureAlpha: 1
-  _extentsScale: {x: 1, y: 1.71, z: 1}
+  _extentsScale: {x: 1, y: 1, z: 1}
   _noiseVariation: 1
   _allowViewFromInside: 0
   _debugSpillPoint: 0

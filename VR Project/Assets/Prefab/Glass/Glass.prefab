@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 23000012471022466}
   - component: {fileID: 114000011406675820}
   - component: {fileID: 1657887740}
+  - component: {fileID: 3299530243441202484}
+  - component: {fileID: 2643654511701894531}
   m_Layer: 0
   m_Name: Glass
   m_TagString: Untagged
@@ -92,22 +94,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013236992436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f61dcfd7077c46509132f92d2df65fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 371bc76237eff4f43935fbd62ac86874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _topology: 1
+  _topology: 10
   _detail: 10
-  _level: 0.039
+  _level: 0
   _liquidColor1: {r: 0, g: 0, b: 0, a: 0.1}
   _liquidScale1: 1
   _liquidColor2: {r: 0, g: 0, b: 0, a: 0.3}
-  _liquidScale2: 5
+  _liquidScale2: 2.39
   _alpha: 1
   _emissionColor: {r: 0, g: 0, b: 0, a: 1}
   _emissionBrightness: 0
   _ditherShadows: 1
-  _murkiness: 1
-  _turbulence1: 0.047
+  _murkiness: 0.651
+  _turbulence1: 0.5
   _turbulence2: 0.2
   _frecuency: 1
   _speed: 1
@@ -121,7 +123,7 @@ MonoBehaviour:
   _foamWeight: 10
   _foamTurbulence: 1
   _foamVisibleFromBottom: 1
-  _smokeEnabled: 0
+  _smokeEnabled: 1
   _smokeColor: {r: 0.7, g: 0.7, b: 0.7, a: 0.25}
   _smokeScale: 0.25
   _smokeBaseObscurance: 2
@@ -130,8 +132,8 @@ MonoBehaviour:
   originalMesh: {fileID: 0}
   originalPivotOffset: {x: 0, y: 0, z: 0}
   _pivotOffset: {x: 0, y: 0, z: 0}
-  _upperLimit: 0.788
-  _lowerLimit: -0.93
+  _upperLimit: 1.5
+  _lowerLimit: -1.5
   _subMeshIndex: 0
   _flaskTint: {r: 0, g: 0, b: 0, a: 1}
   _flaskThickness: 0.03
@@ -154,14 +156,14 @@ MonoBehaviour:
   _textureOffset: {x: 0, y: 0}
   _distortionAmount: 1
   _depthAware: 0
-  _depthAwareOffset: 0.1
+  _depthAwareOffset: 0
   _depthAwareCustomPass: 0
-  _doubleSidedBias: 0
+  _doubleSidedBias: 0.001
   _rotationLevelBias: 0
   _ignoreGravity: 0
   _reactToForces: 0
   _textureAlpha: 1
-  _extentsScale: {x: 1, y: 1.39, z: 1}
+  _extentsScale: {x: 1, y: 1, z: 1}
   _noiseVariation: 1
   _allowViewFromInside: 0
   _debugSpillPoint: 0
@@ -183,4 +185,30 @@ CapsuleCollider:
   m_Radius: 0.05026602
   m_Height: 0.11574804
   m_Direction: 1
-  m_Center: {x: 0.00080716424, y: 0.02172992, z: -0.000019539148}
+  m_Center: {x: 0.00080716424, y: -0.09, z: -0.000019539148}
+--- !u!114 &3299530243441202484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013236992436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c9a9b620fcf644782b771e291cc609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liquidColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2643654511701894531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013236992436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c9a9b620fcf644782b771e291cc609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liquidColor: {r: 0, g: 0, b: 0, a: 0}

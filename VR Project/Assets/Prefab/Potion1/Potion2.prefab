@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 4454829710821356800}
   - component: {fileID: 1768513110}
   m_Layer: 0
-  m_Name: Potion1
+  m_Name: Potion2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,9 +243,9 @@ MonoBehaviour:
   _topology: 10
   _detail: 10
   _level: 1
-  _liquidColor1: {r: 0, g: 0.3131261, b: 1, a: 0.1}
+  _liquidColor1: {r: 1, g: 0, b: 0.041718483, a: 0.1}
   _liquidScale1: 1
-  _liquidColor2: {r: 0, g: 0, b: 1, a: 0.3}
+  _liquidColor2: {r: 1, g: 0, b: 0.3120966, a: 0.3}
   _liquidScale2: 5
   _alpha: 1
   _emissionColor: {r: 0, g: 0, b: 0, a: 1}
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69bacb00763e4d949bf571d6967f2bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: 1
+  info: 0
   bottleState: 1
   bottleAmount: 0
   boundaryHeight: 0.75

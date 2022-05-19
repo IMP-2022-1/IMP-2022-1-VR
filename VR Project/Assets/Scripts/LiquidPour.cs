@@ -7,7 +7,8 @@ using LiquidVolumeFX;
 [RequireComponent(typeof(Collider))]
 public class LiquidPour : MonoBehaviour
 {
-    // variable STATE
+    [SerializeField]
+    private LiquidController.COLOR info;
     public enum STATE
     {
         ACTIVE, NONACTIVE, DONE
@@ -97,6 +98,9 @@ public class LiquidPour : MonoBehaviour
 
     private void bottlePourOn()
     {
+        Color nowColor = GameObject.Find("Glass").GetComponent<LiquidController>().liquidColor;
+        nowColor = GameObject.Find("Glass").GetComponent<LiquidController>().colorState(info);
+
         if (bottleAmount == AMOUNT.FULL)
         {
             if (liquidVolume.level > 0.51f)

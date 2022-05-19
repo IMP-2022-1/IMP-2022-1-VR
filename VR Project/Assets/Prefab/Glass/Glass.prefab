@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33000013358018030}
   - component: {fileID: 23000012471022466}
   - component: {fileID: 114000011406675820}
+  - component: {fileID: 1657887740}
   m_Layer: 0
   m_Name: Glass
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1000013236992436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 1, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,17 +97,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _topology: 1
   _detail: 10
-  _level: 0.808
-  _liquidColor1: {r: 0, g: 1, b: 0, a: 0.1}
+  _level: 0.039
+  _liquidColor1: {r: 0, g: 0, b: 0, a: 0.1}
   _liquidScale1: 1
-  _liquidColor2: {r: 0.53103447, g: 0, b: 1, a: 0.3}
+  _liquidColor2: {r: 0, g: 0, b: 0, a: 0.3}
   _liquidScale2: 5
   _alpha: 1
   _emissionColor: {r: 0, g: 0, b: 0, a: 1}
   _emissionBrightness: 0
   _ditherShadows: 1
   _murkiness: 1
-  _turbulence1: 0.5
+  _turbulence1: 0.047
   _turbulence2: 0.2
   _frecuency: 1
   _speed: 1
@@ -129,9 +130,9 @@ MonoBehaviour:
   originalMesh: {fileID: 0}
   originalPivotOffset: {x: 0, y: 0, z: 0}
   _pivotOffset: {x: 0, y: 0, z: 0}
-  _upperLimit: 1
+  _upperLimit: 0.788
   _lowerLimit: -0.93
-  _subMeshIndex: -1
+  _subMeshIndex: 0
   _flaskTint: {r: 0, g: 0, b: 0, a: 1}
   _flaskThickness: 0.03
   _flaskGlossinessExternal: 0.767
@@ -153,7 +154,7 @@ MonoBehaviour:
   _textureOffset: {x: 0, y: 0}
   _distortionAmount: 1
   _depthAware: 0
-  _depthAwareOffset: 0
+  _depthAwareOffset: 0.1
   _depthAwareCustomPass: 0
   _doubleSidedBias: 0
   _rotationLevelBias: 0
@@ -169,3 +170,17 @@ MonoBehaviour:
   _physicsMass: 1
   _physicsAngularDamp: 0.02
   liqMat: {fileID: 0}
+--- !u!136 &1657887740
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013236992436}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.05026602
+  m_Height: 0.11574804
+  m_Direction: 1
+  m_Center: {x: 0.00080716424, y: 0.02172992, z: -0.000019539148}

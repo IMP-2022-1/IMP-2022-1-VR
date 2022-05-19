@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _topology: 10
   _detail: 10
-  _level: 0.392
+  _level: 1
   _liquidColor1: {r: 0.0058391057, g: 0.7941176, b: 0.0058391057, a: 0.1}
   _liquidScale1: 1
   _liquidColor2: {r: 0.6397059, g: 0.23518598, b: 0.23518598, a: 0.3}

@@ -10,7 +10,7 @@ public class LiquidPour : MonoBehaviour
     // variable STATE
     public enum STATE
     {
-        ACTIVE, NONACTIVE
+        ACTIVE, NONACTIVE, DONE
     };
 
     public enum AMOUNT
@@ -27,10 +27,12 @@ public class LiquidPour : MonoBehaviour
     [SerializeField]
     private float speed = 0.2f;
     private LiquidVolume liquidVolume;
+    private Vector3 origin;
 
     void Awake()
     {
         liquidVolume = GetComponent<LiquidVolume>();
+        origin = this.transform.position;
     }
 
     void Update()
@@ -43,15 +45,18 @@ public class LiquidPour : MonoBehaviour
     {
         // check the activate status
         RaycastHit hit;
-        Debug.DrawRay(transform.position, transform.up * 0.5f, Color.red);
+        // Debug.DrawRay(transform.position, transform.up * 0.5f, Color.red);
 
         if (Physics.Raycast(transform.position, transform.up, out hit, 0.5f))
         {
-            Debug.Log(hit.collider.gameObject.name);
-            bottleState =
-                hit.collider.gameObject.name == "Glass"
-                ? STATE.ACTIVE
-                : STATE.NONACTIVE;
+            // Debug.Log(hit.collider.gameObject.name);
+            if (bottleState != STATE.DONE)
+            {
+                bottleState =
+                    hit.collider.gameObject.name == "Glass"
+                    ? STATE.ACTIVE
+                    : STATE.NONACTIVE;
+            }
         }
 
         // You can pour if it's active
@@ -70,32 +75,58 @@ public class LiquidPour : MonoBehaviour
 
     private void amountCheck()
     {
+        if (bottleState == STATE.DONE)
+        {
+            resetPosition();
+            bottleState = STATE.NONACTIVE;
+        }
+
         if (liquidVolume.level > 0.5f) bottleAmount = AMOUNT.FULL;
-        else if (liquidVolume.level > 0f) bottleAmount = AMOUNT.MIDDLE;
-        else bottleAmount = AMOUNT.EMPTY;
+        else if (liquidVolume.level > 0f)
+        {
+            bottleAmount = AMOUNT.MIDDLE;
+        }
+        else
+        {
+            bottleAmount = AMOUNT.EMPTY;
+
+            if (bottleState != STATE.NONACTIVE)
+                bottleState = STATE.DONE;
+        }
     }
 
     private void bottlePourOn()
     {
         if (bottleAmount == AMOUNT.FULL)
         {
-            if (liquidVolume.level >= 0.5f)
+            if (liquidVolume.level > 0.51f)
             {
                 liquidVolume.level -= Time.deltaTime * speed;
             }
-            else liquidVolume.level = 0.5f;
+            else
+            {
+                liquidVolume.level = 0.5f;
+                bottleState = STATE.DONE;
+            }
         }
         else if (bottleAmount == AMOUNT.MIDDLE)
         {
-            if (liquidVolume.level >= 0f)
+            if (liquidVolume.level > 0f)
             {
                 liquidVolume.level -= Time.deltaTime * speed;
             }
-            else liquidVolume.level = 0f;
+            else bottleState = STATE.DONE;
         }
+        else bottleState = STATE.DONE;
 
         // Debug.Log(liquidVolume.level);
         liquidVolume.UpdateMaterialProperties();
+    }
+
+    private void resetPosition()
+    {
+        transform.position = origin;
+        transform.rotation = Quaternion.identity;
     }
 
     private void bottleFillOn()

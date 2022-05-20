@@ -14,10 +14,6 @@
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
 
-#ignore Packages that I was downloaded
-/Packages/unitypackage/
-/Packages/fbx/
-
 #ignore Samples
 /[Aa]ssets/Example/
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SecurityDoorOpen : MonoBehaviour
 {
-    public GameObject Door;
+    public GameObject[] Doors;
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +20,20 @@ public class SecurityDoorOpen : MonoBehaviour
 
     public void DoorOpen()
     {
-        if (Door == null)
+        for (int i = 0; i < Doors.Length; i++)
         {
-            Debug.Log("Please assign Door");
-            return;
+            if (Doors[i] == null)
+            {
+                Debug.Log("Please assign Door");
+                return;
+            } else
+            {
+                AutomaticDoorOpen automaticDoorOpen = Doors[i].GetComponent<AutomaticDoorOpen>();
+                if (automaticDoorOpen == null)
+                    Debug.Log("This Object Doesn't have AutomaticDoorOpen");
+                else
+                    automaticDoorOpen.Moving = true;
+            }
         }
-
-
     }
 }

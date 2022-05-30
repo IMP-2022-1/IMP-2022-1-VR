@@ -9,8 +9,8 @@ public class MosquitoController2 : MonoBehaviour
     public enum State { idle, trace, attack, dead }
     public State currentState = State.idle;
 
-    protected Transform MainCameraTransform;
-    private NavMeshAgent nvAgent;
+    public Transform MainCameraTransform;
+    protected NavMeshAgent nvAgent;
 
     public float OriginalHP = 1;
     public float HP = 1;
@@ -20,10 +20,19 @@ public class MosquitoController2 : MonoBehaviour
     public float TraceRange = 2;
     public float AttackRange = 0.3f;
 
+    // Used in idle moving
+    public Transform IdleEndPos;
+    protected Vector3 IdleDestination;
+    protected Vector3 IdleEndPosPosition;
+    protected bool IsDestinationIdleEnd;
+
     // Used in Attack
     protected bool checkCollision;
     protected Vector3 OriginalPosition;
     protected float TimeCheck;
+
+    // x,z cordinate
+    protected Vector3 xz;
 
     public Animator animator;
 
@@ -33,7 +42,7 @@ public class MosquitoController2 : MonoBehaviour
         whenOnEnable();
     }
 
-    protected virtual void whenOnEnable()
+    public virtual void whenOnEnable()
     {
         currentState = State.idle;
         nvAgent = GetComponent<NavMeshAgent>();
@@ -49,7 +58,8 @@ public class MosquitoController2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(MainCameraTransform.position);
+        xz = new Vector3(MainCameraTransform.position.x, 0, MainCameraTransform.position.z);
+        // transform.LookAt(xz);
         if (HP <= 0)
             currentState = State.dead;
 
@@ -70,7 +80,7 @@ public class MosquitoController2 : MonoBehaviour
         }
     }
 
-    protected virtual void UpdateIdle()
+    public virtual void UpdateIdle()
     {
         if (MainCameraTransform == null)
         {
@@ -79,26 +89,28 @@ public class MosquitoController2 : MonoBehaviour
         }
             
 
-        float distance = (MainCameraTransform.position - transform.position).magnitude;
+        float distance = (xz - transform.position).magnitude;
         if (distance <= TraceRange)
         {
             currentState = State.trace;
             return;
         }
     }
-    protected virtual void UpdateTrace()
+    public virtual void UpdateTrace()
     {
-        Debug.Log("Monster Moving");
+        // Debug.Log("Monster Moving");
 
-        float distance = (MainCameraTransform.position - transform.position).magnitude;
+        float distance = (xz - transform.position).magnitude;
         if (distance > TraceRange)
         {
             currentState = State.idle;
             return;
         }
 
-        nvAgent.SetDestination(MainCameraTransform.position);
+        nvAgent.SetDestination(xz);
         nvAgent.speed = Speed;
+        //Debug.Log(xz);
+        //Debug.Log(distance);
 
         if (distance <= AttackRange)
         {
@@ -110,12 +122,12 @@ public class MosquitoController2 : MonoBehaviour
 
         // transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(MainCameraTransform.position), 20 * Time.deltaTime);
     }
-    protected virtual void UpdateAttack()
+    public virtual void UpdateAttack()
     {
 
         if (!checkCollision)
         {
-            transform.position = Vector3.MoveTowards(transform.position, MainCameraTransform.position, Speed * 30 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, xz, Speed * 30 * Time.deltaTime);
             Debug.Log("Under Attack");
         }
         else
@@ -143,7 +155,7 @@ public class MosquitoController2 : MonoBehaviour
     }
 
 
-    protected virtual void UpdateDead()
+    public virtual void UpdateDead()
     {
         this.gameObject.SetActive(false);
     }

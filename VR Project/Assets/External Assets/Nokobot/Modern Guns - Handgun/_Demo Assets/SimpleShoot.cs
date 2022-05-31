@@ -6,6 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
 public class SimpleShoot : MonoBehaviour
 {
+    [SerializeField] private GameObject gunPrefab;
+
     [Header("Prefab Refrences")]
     public GameObject bulletPrefab;
     public GameObject casingPrefab;
@@ -45,6 +47,12 @@ public class SimpleShoot : MonoBehaviour
     void Update()
     {
 
+    }
+
+    private void FixedUpdate()
+    {
+        gunPrefab.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        gunPrefab.transform.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
     }
 
 

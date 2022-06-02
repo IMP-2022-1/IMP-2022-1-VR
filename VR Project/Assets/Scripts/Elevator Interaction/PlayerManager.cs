@@ -5,14 +5,22 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlayerManager : MonoBehaviour
 {
+    private bool electricity;
     private bool cardCheck;
     public GameObject hologramPrefab;
     private GameObject hologram;
 
-    AudioSource audioSource;
+    public AudioSource audioSource;
+    public AudioClip leverClip;
+    public AudioClip powerOnClip;
+    public AudioClip hologramClip;
+    public AudioClip wrongNumberClip;
+    public AudioClip rightNumberClip;
+
     // Start is called before the first frame update
     void Start()
     {
+        electricity = false;
         cardCheck = true;
 
         audioSource = GetComponent<AudioSource>();
@@ -21,23 +29,26 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GripCard();
+        if (electricity)
+        {
+            GrapCard();
+        }
     }
 
 
     public void OnPressNumber(SelectEnterEventArgs args)
     {
-        if (args.interactableObject.transform.CompareTag("2"))
+        if (args.interactableObject.transform.CompareTag("RightNumber"))
         {
-            Debug.Log("Correct number pressed");
+            Debug.Log("Right number pressed");
+            audioSource.clip = rightNumberClip;
+            audioSource.Play();
         }
-        if (args.interactableObject.transform.CompareTag("1"))
+        if (args.interactableObject.transform.CompareTag("WrongNumber"))
         {
             Debug.Log("Wrong number pressed");
-        }
-        if (args.interactableObject.transform.CompareTag("3"))
-        {
-            Debug.Log("Wrong number pressed");
+            audioSource.clip = wrongNumberClip;
+            audioSource.Play();
         }
     }
 
@@ -47,19 +58,16 @@ public class PlayerManager : MonoBehaviour
         GameObject card = GameObject.FindGameObjectWithTag("Card");
         if (args.interactableObject.transform.CompareTag("Card"))
         {
-            if (Vector3.Distance(usim.transform.position, card.transform.position) < 0.01)
+            /*if (Vector3.Distance(usim.transform.position, card.transform.position) < 0.01)
             {
                 Debug.Log("Card insert!");
-            }
+            }*/
+            Debug.Log("Grap ID card!");
         }
 
     }
 
-    private void OnTriggerEnter(Collider collider)
-    {
-    }
-
-    public void GripCard()
+    public void GrapCard()
     {
         GameObject usim = GameObject.FindGameObjectWithTag("Slot");
         GameObject card = GameObject.FindGameObjectWithTag("Card");
@@ -67,10 +75,31 @@ public class PlayerManager : MonoBehaviour
         {
             if (Vector3.Distance(usim.transform.position, card.transform.position) < 0.1f)
             {
-                Debug.Log("Card insert!");
+                Debug.Log("Hologram appear!");
+                audioSource.clip = hologramClip;
+                audioSource.Play();
                 cardCheck = false;
                 hologram = Instantiate(hologramPrefab, usim.transform.position + new Vector3(-0.1f, 0, 0), usim.transform.rotation);
             }
+        }
+    }
+
+    public void OnGrabLever(SelectEnterEventArgs args)
+    {
+        if (args.interactableObject.transform.CompareTag("RightLever"))
+        {
+            Debug.Log("Correct Lever");
+            audioSource.clip = leverClip;
+            audioSource.Play();
+            audioSource.clip = powerOnClip;
+            audioSource.Play();
+            electricity = true;
+        }
+        if (args.interactableObject.transform.CompareTag("WrongLever"))
+        {
+            Debug.Log("Wrong Lever");
+            audioSource.clip = leverClip;
+            audioSource.Play();
         }
     }
 }

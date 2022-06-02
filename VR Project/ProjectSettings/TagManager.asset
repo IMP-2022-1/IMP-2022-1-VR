@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Security
   - Magazine
+  - Slot
+  - Card
+  - RightLever
+  - WrongLever
+  - RightNumber
+  - WrongNumber
   layers:
   - Default
   - TransparentFX

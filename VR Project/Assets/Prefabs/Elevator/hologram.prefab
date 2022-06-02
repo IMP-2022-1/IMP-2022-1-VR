@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5081907781022789016}
   m_Layer: 0
   m_Name: hologram (1)
-  m_TagString: 1
+  m_TagString: WrongNumber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 2
+    m_Bits: 3
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 5081907781687689033}
   m_Layer: 0
   m_Name: hologram
-  m_TagString: Untagged
+  m_TagString: WrongNumber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 5081907781853398990}
   m_Layer: 0
   m_Name: hologram (2)
-  m_TagString: 2
+  m_TagString: RightNumber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -386,7 +386,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 2
+    m_Bits: 3
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 5081907782224864035}
   m_Layer: 0
   m_Name: hologram (3)
-  m_TagString: 3
+  m_TagString: WrongNumber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -560,7 +560,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 2
+    m_Bits: 3
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:

@@ -7,11 +7,13 @@ TagManager:
   - Security
   - Magazine
   - Slot
+  - 1
+  - 2
+  - 3
   - Card
-  - RightLever
-  - WrongLever
-  - RightNumber
-  - WrongNumber
+  - SmallEnemy
+  - HolyBullet
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Magazine : MonoBehaviour
 {
     public int numOfAmmo = 8;
+    [SerializeField] private SocketTag magazineInventory;
 
     void Start()
     {
@@ -14,6 +15,23 @@ public class Magazine : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void FixedUpdate()
+    {
+        
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if(collision.transform.tag == "Ground")
+        {
+            if (!magazineInventory.hasSelection)
+            {
+                transform.position = magazineInventory.transform.position;
+                numOfAmmo = 8;
+            }
+        }
     }
 
     public bool isEmpty()

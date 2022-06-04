@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         {
             ImageColor.a += 0.01f;
             GameOverImage.color = ImageColor;
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(0.01f);
         }
 
         GameOverOnceChecked = false;

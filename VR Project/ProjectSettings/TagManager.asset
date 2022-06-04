@@ -6,14 +6,7 @@ TagManager:
   tags:
   - Security
   - Magazine
-  - Slot
-  - 1
-  - 2
-  - 3
-  - Card
-  - SmallEnemy
-  - HolyBullet
-  - Bullet
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -26,7 +19,7 @@ TagManager:
   - Security
   - Magazine
   - Weapon
-  - 
+  - Ground
   - 
   - 
   - 

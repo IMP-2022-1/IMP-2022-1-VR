@@ -8,6 +8,8 @@ public class SimpleShoot : MonoBehaviour
 {
     [SerializeField] private GameObject gunPrefab;
 
+
+
     [Header("Prefab Refrences")]
     public GameObject bulletPrefab;
     public GameObject casingPrefab;

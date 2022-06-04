@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
         // Object doesn't destroy even if scene change 
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(GameOverUI.gameObject);
+        //
 
         BeforeSceneNumber = -1;
         // SceneChange(Loaded) Event

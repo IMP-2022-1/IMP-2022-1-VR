@@ -40,7 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5922977192370121966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74382a7e795d31149bcf4045aa03f552, type: 3}
+  m_Script: {fileID: 11500000, guid: a342f76fb659eab49bf621f2a81d8dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controllerPrefabs:

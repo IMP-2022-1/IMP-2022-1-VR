@@ -5,6 +5,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlayerManager : MonoBehaviour
 {
+    public int playerHP = 3;
+
     private bool electricity;
     private bool cardCheck;
     public GameObject hologramPrefab;
@@ -29,9 +31,13 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Checking player HP
+        PlayerHPChecking(playerHP);
+
+        // Checking electricity
         if (electricity)
         {
-            GrapCard();
+            SlashCard();
         }
     }
 
@@ -43,6 +49,7 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("Right number pressed");
             audioSource.clip = rightNumberClip;
             audioSource.Play();
+            playerHP = 0;
         }
         if (args.interactableObject.transform.CompareTag("WrongNumber"))
         {
@@ -67,7 +74,7 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-    public void GrapCard()
+    public void SlashCard()
     {
         GameObject usim = GameObject.FindGameObjectWithTag("Slot");
         GameObject card = GameObject.FindGameObjectWithTag("Card");
@@ -100,6 +107,18 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("Wrong Lever");
             audioSource.clip = leverClip;
             audioSource.Play();
+        }
+    }
+
+    public void PlayerHPChecking(int playerHP)
+    {
+        if(playerHP == 0)
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+Application.Quit();
+#endif
         }
     }
 }

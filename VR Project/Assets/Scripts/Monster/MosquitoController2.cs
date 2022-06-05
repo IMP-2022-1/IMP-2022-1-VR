@@ -185,6 +185,7 @@ public class MosquitoController2 : MonoBehaviour
 
         if (!checkCollision)
         {
+
             transform.position = Vector3.MoveTowards(transform.position, xz, Speed * 30 * Time.deltaTime);
             Debug.Log("Under Attack");
 
@@ -206,14 +207,20 @@ public class MosquitoController2 : MonoBehaviour
         }
         else
         {
+
             if (TimeCheck < 2)
             {
+                if (Checked && animator.GetBool("Attack"))
+                    animator.SetBool("Attack", false);
+
                 TimeCheck += Time.deltaTime;
+                nvAgent.ResetPath();
                 nvAgent.SetDestination(OriginalPosition);
-                nvAgent.speed = 2;
+                nvAgent.speed = 1;
             }
             else
             {
+                nvAgent.ResetPath();
                 checkCollision = false;
                 currentState = State.idle;
                 TimeCheck = 0;

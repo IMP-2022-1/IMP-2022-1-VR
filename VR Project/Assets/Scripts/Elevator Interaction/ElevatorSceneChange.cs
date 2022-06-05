@@ -20,7 +20,10 @@ public class ElevatorSceneChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameOverUI == null)
+        {
+            GameOverUI = GameObject.Find("GameOverUI").GetComponent<Canvas>();
+        }
     }
 
     private void OnTriggerStay(Collider other)

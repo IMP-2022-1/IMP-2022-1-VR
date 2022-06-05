@@ -6,12 +6,7 @@ TagManager:
   tags:
   - Security
   - Magazine
-  - Slot
-  - Card
-  - RightLever
-  - WrongLever
-  - RightNumber
-  - WrongNumber
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -24,7 +19,7 @@ TagManager:
   - Security
   - Magazine
   - Weapon
-  - 
+  - Ground
   - 
   - 
   - 

@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         // Re Assign Player.
         Player = GameObject.FindGameObjectWithTag("Player");
+        Player.transform.parent.parent.transform.position = GameObject.Find("SpawnPosition").transform.position;
     }
 
     // Start is called before the first frame update

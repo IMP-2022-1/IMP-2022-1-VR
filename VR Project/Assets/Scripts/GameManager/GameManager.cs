@@ -22,7 +22,9 @@ public class GameManager : MonoBehaviour
         // Object doesn't destroy even if scene change 
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(GameOverUI.gameObject);
-        //
+
+
+        Player = GameObject.FindGameObjectWithTag("Player");
 
         BeforeSceneNumber = -1;
         // SceneChange(Loaded) Event
@@ -47,16 +49,19 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         // + If SceneLoaded -> Player X when before we re assign so check player exist!
-        // if (Player.GetComponenet<have HP script name>().HP == 0)
-        // GameOver and Go to GameOver Scene. 
-        // Wrap this. "if (Player~~)"
-        if (!GameOverOnceChecked)
+        if (Player.GetComponent<PlayerManager>().playerHP <= 0)
         {
-            GameOverOnceChecked = true;
-            GameOverUI.gameObject.SetActive(true);
+            // GameOver and Go to GameOver Scene. 
+            // Wrap this. "if (Player~~)"
+            if (!GameOverOnceChecked)
+            {
+                Player.GetComponent<PlayerManager>().playerHP = 3;
+                GameOverOnceChecked = true;
+                GameOverUI.gameObject.SetActive(true);
 
-            BeforeSceneNumber = SceneManager.GetActiveScene().buildIndex;
-            StartCoroutine("ToGameOver");
+                BeforeSceneNumber = SceneManager.GetActiveScene().buildIndex;
+                StartCoroutine("ToGameOver");
+            }
         }
     }
 

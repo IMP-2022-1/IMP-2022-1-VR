@@ -286,7 +286,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 5922977192370121964, guid: 87beb29c8cf1b9941b3829c97f901edb, type: 3}
+  m_ModelPrefab: {fileID: 5922977192370121964, guid: eadd8e55d60ab924299186d279a5a292, type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 487233392}
   - component: {fileID: 487233391}
   m_Layer: 0
-  m_Name: Body
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -640,9 +640,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 487233386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2a37878d719613479b744c532ad0661, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a9ae63467d714741b4626cca045e5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHP: 3
   hologramPrefab: {fileID: 5081907781687689032, guid: c3546d8ed78f8174fb2d82cc3d849a10, type: 3}
   audioSource: {fileID: 0}
   leverClip: {fileID: 8300000, guid: 97800a14462e8c54d9b03355ca9b28b4, type: 3}
@@ -2109,7 +2110,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 5922977192370121964, guid: 25d6bbd41fdcb884497bb09e30ab0e36, type: 3}
+  m_ModelPrefab: {fileID: 5922977192370121964, guid: bfae905dd8c9bc34dbb45c79a8653111, type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0

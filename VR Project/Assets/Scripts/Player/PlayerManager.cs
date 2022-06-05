@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.UI;
+
 
 public class PlayerManager : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class PlayerManager : MonoBehaviour
     public AudioClip hologramClip;
     public AudioClip wrongNumberClip;
     public AudioClip rightNumberClip;
+
+    [SerializeField] private Image bloodScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +43,20 @@ public class PlayerManager : MonoBehaviour
         {
             SlashCard();
         }
+
+        if (playerHP == 3){
+            bloodScreen.color = new Color(255, 0, 0, 0);
+        }
+
+        if (playerHP == 2){
+            bloodScreen.color = new Color(255, 0, 0, 127);
+        }
+
+        if (playerHP <= 1){
+            bloodScreen.color = new Color(255, 0, 0, 255);
+
+        }
+
     }
 
 

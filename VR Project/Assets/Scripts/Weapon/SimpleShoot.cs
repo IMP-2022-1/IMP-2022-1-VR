@@ -134,5 +134,13 @@ public class SimpleShoot : MonoBehaviour
         gunAudio.PlayOneShot(reloadSound);
     }
 
+    public void BulletEnhanced()        //총알 강화할 때 호출하는 매서드
+    {
+        if(bulletPrefab.tag == "Bullet")
+        {
+            bulletPrefab.tag = "HolyBullet";
+        }
+
+    }
 
 }

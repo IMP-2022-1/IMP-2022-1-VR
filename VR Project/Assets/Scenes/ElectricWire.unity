@@ -1860,6 +1860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeverBox
       objectReference: {fileID: 0}
+    - target: {fileID: 2814743568137954715, guid: 79839507739b3e947962b848a51900ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2814743568169182208, guid: 79839507739b3e947962b848a51900ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.092

@@ -8,12 +8,18 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScenes/TestGameManagerAndUI.unity
     guid: 61163be703178e54ba0a01aacac81bb1
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 756c9eeb6a322484188b7f3849c84036
+  - enabled: 1
+    path: Assets/Scenes/Floor 1.unity
+    guid: d85c5486f53d8a54ebaa5f6b879ef7c0
+  - enabled: 1
+    path: Assets/Scenes/Floor 2.unity
+    guid: a909db251017b544ea8635175bf03341
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3e0b55497a5874d48bc89379f55b4130, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: af0159ca09c47434ab10add25fbc5652, type: 2}

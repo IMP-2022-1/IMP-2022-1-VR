@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class MosquitoController2 : MonoBehaviour
 {
     // Basic stats
-    public enum State { idle, trace, attack, dead }
+    public enum State { idle, trace, attack, heated, dead }
     public State currentState = State.idle;
 
     public Transform MainCameraTransform;
@@ -31,10 +31,22 @@ public class MosquitoController2 : MonoBehaviour
     protected Vector3 OriginalPosition;
     protected float TimeCheck;
 
+    // Used in Heated
+    protected float HeatedTimeCheck;
+    protected bool HeatedTraceCheck;
+    protected float OriginalTraceRange;
+    protected float HeatedTraceTime;
+    protected float HeatedTraceTimeCheck;
+
     // x,z cordinate
     protected Vector3 xz;
 
-    public Animator animator;
+    // used in animation
+    protected Animator animator;
+    protected bool isthereSuitableAnimator;
+    protected bool Heated;
+    protected bool Attacked;
+    protected bool Checked;
 
 
     void OnEnable()
@@ -44,6 +56,7 @@ public class MosquitoController2 : MonoBehaviour
 
     public virtual void whenOnEnable()
     {
+        HP = OriginalHP;
         currentState = State.idle;
         nvAgent = GetComponent<NavMeshAgent>();
         MainCameraTransform = GameObject.FindWithTag("MainCamera").transform;
@@ -53,6 +66,33 @@ public class MosquitoController2 : MonoBehaviour
         checkCollision = false;
         OriginalPosition = transform.position;
         TimeCheck = 0;
+        HeatedTimeCheck = 0;
+
+        // Heated Trace
+        HeatedTraceCheck = false;
+        OriginalTraceRange = TraceRange;
+        HeatedTraceTime = 0;
+        HeatedTraceTimeCheck = 3;
+
+        // Animation
+        animator = transform.GetChild(0).GetChild(0).GetComponent<Animator>();
+        if (animator != null)
+        {   if (transform.CompareTag("SmallEnemy"))
+                isthereSuitableAnimator = true;
+            else
+            {
+                Debug.Log("this Object don't have suitable animator");
+                isthereSuitableAnimator = false;
+            }
+        }
+        else
+        {
+            Debug.Log("This Object don't have animator");
+            isthereSuitableAnimator = false;
+        }
+        Heated = false;
+        Attacked = false;
+        Checked = true;
     }
 
     // Update is called once per frame
@@ -73,6 +113,9 @@ public class MosquitoController2 : MonoBehaviour
                 break;
             case State.attack:
                 UpdateAttack();
+                break;
+            case State.heated:
+                UpdateHeated();
                 break;
             case State.dead:
                 UpdateDead();
@@ -96,6 +139,7 @@ public class MosquitoController2 : MonoBehaviour
             return;
         }
     }
+
     public virtual void UpdateTrace()
     {
         // Debug.Log("Monster Moving");
@@ -120,8 +164,22 @@ public class MosquitoController2 : MonoBehaviour
             return;
         }
 
+        // Heated Trace
+        if (HeatedTraceCheck)
+        {
+            if (HeatedTraceTime < HeatedTraceTimeCheck)
+                HeatedTraceTime += Time.deltaTime;
+            else
+            {
+                TraceRange = OriginalTraceRange;
+                HeatedTraceTime = 0;
+                HeatedTraceCheck = false;
+            }
+        }
+
         // transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(MainCameraTransform.position), 20 * Time.deltaTime);
     }
+
     public virtual void UpdateAttack()
     {
 
@@ -129,6 +187,22 @@ public class MosquitoController2 : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, xz, Speed * 30 * Time.deltaTime);
             Debug.Log("Under Attack");
+
+            // Animation
+            if (isthereSuitableAnimator)
+            {
+                if (!Checked)
+                {
+                    animator.SetBool("Attack", false);
+                    Checked = true;
+                }
+                if (!Attacked)
+                {
+                    animator.SetBool("Attack", true);
+                    Attacked = true;
+                    Checked = false;
+                }
+            }
         }
         else
         {
@@ -143,14 +217,66 @@ public class MosquitoController2 : MonoBehaviour
                 checkCollision = false;
                 currentState = State.idle;
                 TimeCheck = 0;
+
+                // Animation
+                Attacked = false;
+                Checked = true;
             }
         }
     }
+
+    public virtual void UpdateHeated()
+    {
+        // Heated Animation
+        if (isthereSuitableAnimator)
+        {
+            if (!Checked)
+            {
+                animator.SetBool("Damaged", false);
+                Checked = true;
+            }
+            if (!Heated)
+            {
+                animator.SetBool("Damaged", true);
+                Heated = true;
+                Checked = false;
+            }
+        }
+
+        // if want to make STUN time change, change this number.
+        if (HeatedTimeCheck < 0.3)
+        {
+            HeatedTimeCheck += Time.deltaTime;
+        }
+        else
+        {
+            HeatedTraceCheck = true;
+            HeatedTraceTime = 0;
+            currentState = State.trace;
+        }
+    }
+
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.CompareTag("Player")) {
             checkCollision = true;
             // collision.GetComponent<Component name that have Player's hp>().HP -= Damage
+            // if you want to Haptic Vibrate, Insert.
+        }
+
+        if (collision.transform.CompareTag("Bullet"))
+        {
+            TraceRange = 5;
+            HP -= 0.4f;
+            currentState = State.heated;
+        }
+
+        if (collision. transform.CompareTag("HolyBullet"))
+        {
+            TraceRange = 5;
+            HP -= 1f;
+            currentState = State.heated;
         }
     }
 

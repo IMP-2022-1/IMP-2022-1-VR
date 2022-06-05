@@ -40,7 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5922977192370121966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74382a7e795d31149bcf4045aa03f552, type: 3}
+  m_Script: {fileID: 11500000, guid: a342f76fb659eab49bf621f2a81d8dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controllerPrefabs:
@@ -49,6 +49,6 @@ MonoBehaviour:
   - {fileID: 4024951872544157354, guid: cfa8dc06d611ba340b06bbefba58ee46, type: 3}
   - {fileID: 7523567926693483842, guid: b2ec64201e9ec6c4ba155691307536cb, type: 3}
   - {fileID: 5191550869875014123, guid: 0efe8147fc0009d4ea3039b2374d927c, type: 3}
-  controllerCharacteristics: 576
+  controllerCharacteristics: 0
   showController: 0
   handModelPrefab: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}

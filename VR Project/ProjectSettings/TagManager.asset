@@ -16,6 +16,7 @@ TagManager:
   - SmallEnemy
   - Bullet
   - HolyBullet
+  - Light
   layers:
   - Default
   - TransparentFX

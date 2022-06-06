@@ -22,7 +22,8 @@ public class ElevatorSceneChange : MonoBehaviour
     {
         if (GameOverUI == null)
         {
-            GameOverUI = GameObject.Find("GameOverUI").GetComponent<Canvas>();
+            if(GameObject.Find("GameOverUI") != null)
+                GameOverUI = GameObject.Find("GameOverUI").GetComponent<Canvas>();
         }
     }
 

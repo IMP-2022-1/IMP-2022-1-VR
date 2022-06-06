@@ -104,6 +104,12 @@ public class PlayerManager : MonoBehaviour
             audioSource.clip = powerOnClip;
             audioSource.Play();
             electricity = true;
+
+            // Light On
+            if (GameObject.Find("Floor2Setting") != null)
+            {
+                GameObject.Find("Floor2Setting").GetComponent<Floor2Setting>().ReLight();
+            }
         }
         if (args.interactableObject.transform.CompareTag("WrongLever"))
         {

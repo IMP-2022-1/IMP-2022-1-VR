@@ -6,7 +6,10 @@ VFXManager:
   m_IndirectShader: {fileID: 0}
   m_CopyBufferShader: {fileID: 0}
   m_SortShader: {fileID: 0}
+<<<<<<< HEAD
   m_StripUpdateShader: {fileID: 0}
+=======
+>>>>>>> 3be12fee0d5ba7df117df0b64309a7ae777e20f0
   m_RenderPipeSettingsPath: 
   m_FixedTimeStep: 0.016666668
   m_MaxDeltaTime: 0.05

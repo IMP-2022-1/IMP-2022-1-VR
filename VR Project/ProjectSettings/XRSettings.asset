@@ -4,7 +4,11 @@
         "VR Device User Alert"
     ],
     "m_SettingValues": [
+<<<<<<< HEAD
         "True",
+=======
+        "False",
+>>>>>>> 3be12fee0d5ba7df117df0b64309a7ae777e20f0
         "False"
     ]
 }

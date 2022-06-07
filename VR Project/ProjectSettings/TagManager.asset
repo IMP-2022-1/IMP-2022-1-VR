@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags: []
+=======
+  tags:
+  - Security
+  - Magazine
+  - Weapon
+  - WrongNumber
+  - RightNumber
+  - Card
+  - Slot
+  - WrongLever
+  - RightLever
+  - Bullet
+  - HolyBullet
+>>>>>>> 3be12fee0d5ba7df117df0b64309a7ae777e20f0
   layers:
   - Default
   - TransparentFX
@@ -11,12 +26,21 @@ TagManager:
   - 
   - Water
   - UI
+<<<<<<< HEAD
   - 
   - 
   - 
   - 
   - 
   - 
+=======
+  - Handle
+  - Hand
+  - Security
+  - Magazine
+  - Weapon
+  - Ground
+>>>>>>> 3be12fee0d5ba7df117df0b64309a7ae777e20f0
   - 
   - 
   - 

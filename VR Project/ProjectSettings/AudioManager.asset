@@ -7,25 +7,14 @@ AudioManager:
   m_Volume: 1
   Rolloff Scale: 1
   Doppler Factor: 1
-<<<<<<< HEAD
   Default Speaker Mode: 2
-=======
-  Default Speaker Mode: 5
->>>>>>> 3be12fee0d5ba7df117df0b64309a7ae777e20f0
   m_SampleRate: 0
   m_DSPBufferSize: 1024
   m_VirtualVoiceCount: 512
   m_RealVoiceCount: 32
-<<<<<<< HEAD
-=======
   m_EnableOutputSuspension: 1
->>>>>>> 3be12fee0d5ba7df117df0b64309a7ae777e20f0
   m_SpatializerPlugin: 
   m_AmbisonicDecoderPlugin: 
   m_DisableAudio: 0
   m_VirtualizeEffects: 1
-<<<<<<< HEAD
-  m_RequestedDSPBufferSize: 1024
-=======
   m_RequestedDSPBufferSize: 0
->>>>>>> 3be12fee0d5ba7df117df0b64309a7ae777e20f0

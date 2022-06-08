@@ -1,4 +1,4 @@
-Shader "Display/LEDShader"
+Shader "Compatible/Lit"
 {
     Properties
     {

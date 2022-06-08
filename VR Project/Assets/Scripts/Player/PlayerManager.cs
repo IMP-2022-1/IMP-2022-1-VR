@@ -36,7 +36,8 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         // Checking player HP
-        PlayerHPChecking(playerHP);
+        // PlayerHPChecking(playerHP);
+        // PlayerHPChecking In GameManager
 
         // Checking electricity
         if (electricity)
@@ -107,6 +108,8 @@ public class PlayerManager : MonoBehaviour
                 hologram = Instantiate(hologramPrefab, usim.transform.position + new Vector3(-0.1f, 0, 0), usim.transform.rotation);
             }
         }
+
+        GameObject.Find("DoorOpen").GetComponent<SecurityDoorOpen>().DoorOpen();
     }
 
     public void OnGrabLever(SelectEnterEventArgs args)
@@ -119,6 +122,12 @@ public class PlayerManager : MonoBehaviour
             audioSource.clip = powerOnClip;
             audioSource.Play();
             electricity = true;
+
+            // Light On
+            if (GameObject.Find("Floor2Setting") != null)
+            {
+                GameObject.Find("Floor2Setting").GetComponent<Floor2Setting>().ReLight();
+            }
         }
         if (args.interactableObject.transform.CompareTag("WrongLever"))
         {

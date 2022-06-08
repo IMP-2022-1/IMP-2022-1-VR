@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numOfAmmo: 8
-  magazineInventory: {fileID: 0}
+  magazineInventory: {fileID: 6834685007087932255, guid: 28db432615c0ac542afc22a41b4a2a9f, type: 3}
   gunPrefab: {fileID: 0}
 --- !u!1 &5709260451360052424
 GameObject:

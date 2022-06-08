@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
@@ -52,3 +53,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+=======
+version https://git-lfs.github.com/spec/v1
+oid sha256:d01261ce1182387a00aeb57730bb26330bf470c8b446b7f11eb027278f3f95f9
+size 581
+>>>>>>> origin/MapDesign

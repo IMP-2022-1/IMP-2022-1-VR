@@ -6,10 +6,11 @@ public class Magazine : MonoBehaviour
 {
     public int numOfAmmo = 8;
     [SerializeField] private SocketTag magazineInventory;
+    [SerializeField] private SimpleShoot gunPrefab;
 
     void Start()
     {
-        
+        gunPrefab = GameObject.FindGameObjectWithTag("Weapon").GetComponent<SimpleShoot>();
     }
 
     void Update()
@@ -26,7 +27,7 @@ public class Magazine : MonoBehaviour
     {
         if(collision.transform.tag == "Ground")
         {
-            if (!magazineInventory.hasSelection)
+            if (!magazineInventory.hasSelection && gunPrefab.getWeapon)
             {
                 transform.position = magazineInventory.transform.position;
                 numOfAmmo = 8;

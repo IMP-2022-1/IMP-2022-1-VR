@@ -34,6 +34,8 @@ public class SimpleShoot : MonoBehaviour
     [SerializeField] private XRBaseInteractor socketInteractor;
     private bool hasSlide = true;
 
+    public bool getWeapon = false;
+
     void Start()
     {
         if (barrelLocation == null)
@@ -141,6 +143,11 @@ public class SimpleShoot : MonoBehaviour
             bulletPrefab.tag = "HolyBullet";
         }
 
+    }
+
+    public void GetWeaponFirst()
+    {
+        getWeapon = true;
     }
 
 }

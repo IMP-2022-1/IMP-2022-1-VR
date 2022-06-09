@@ -20,8 +20,14 @@ public class PlayerManager : MonoBehaviour
     public AudioClip hologramClip;
     public AudioClip wrongNumberClip;
     public AudioClip rightNumberClip;
+    public AudioClip bossLeverClip;
 
     [SerializeField] private Image bloodScreen;
+
+    private bool bossLever1;
+    private bool bossLever2;
+    private bool bossLever3;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +36,11 @@ public class PlayerManager : MonoBehaviour
         cardCheck = true;
 
         audioSource = GetComponent<AudioSource>();
+
+        bossLever1 = false;
+        bossLever2 = false;
+        bossLever3 = false;
+        
     }
 
     // Update is called once per frame
@@ -56,6 +67,11 @@ public class PlayerManager : MonoBehaviour
         if (playerHP <= 1){
             bloodScreen.color = new Color(255, 0, 0, 255);
 
+        }
+        // Checking boss lever to destroy queen mosquito
+        if (bossLever1 && bossLever2 && bossLever3)
+        {
+            Destroy(GameObject.FindGameObjectWithTag("Boss"));
         }
 
     }
@@ -147,5 +163,31 @@ public class PlayerManager : MonoBehaviour
 Application.Quit();
 #endif
         }
+    }
+
+    public void OnGrabBossLever(SelectEnterEventArgs args)
+    {
+        if (args.interactableObject.transform.CompareTag("BossLever1"))
+        {
+            Debug.Log("BossLever1");
+            audioSource.clip = bossLeverClip;
+            audioSource.Play();
+            bossLever1 = true;
+        }
+        if (args.interactableObject.transform.CompareTag("BossLever2"))
+        {
+            Debug.Log("BossLever2");
+            audioSource.clip = bossLeverClip;
+            audioSource.Play();
+            bossLever2 = true;
+        }
+        if (args.interactableObject.transform.CompareTag("BossLever3"))
+        {
+            Debug.Log("BossLever3");
+            audioSource.clip = bossLeverClip;
+            audioSource.Play();
+            bossLever3 = true;
+        }
+
     }
 }

@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SmallEnemy
+  - Card
+  - Security
+  - WrongNumber
+  - RightNumber
+  - Magazine
+  - Weapon
+  - Bullet
+  - Slot
+  - WrongLever
+  - RightLever
+  - BossLever1
+  - BossLever2
+  - BossLever3
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,7 @@ TagManager:
   - BossLever1
   - BossLever2
   - BossLever3
+  - Boss
   layers:
   - Default
   - TransparentFX

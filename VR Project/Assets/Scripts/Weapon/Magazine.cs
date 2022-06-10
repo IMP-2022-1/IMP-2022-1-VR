@@ -10,12 +10,11 @@ public class Magazine : MonoBehaviour
 
     void Start()
     {
-        gunPrefab = GameObject.FindGameObjectWithTag("Weapon").GetComponent<SimpleShoot>();
+        gunPrefab = GameObject.Find("M1911 Handgun_Model").GetComponent<SimpleShoot>();
     }
 
     void Update()
     {
-        
     }
 
     private void FixedUpdate()
@@ -27,7 +26,7 @@ public class Magazine : MonoBehaviour
     {
         if(collision.transform.tag == "Ground")
         {
-            if (!magazineInventory.hasSelection && gunPrefab.getWeapon)
+            if (magazineInventory.selectTarget == null && gunPrefab.getWeapon)
             {
                 transform.position = magazineInventory.transform.position;
                 numOfAmmo = 8;

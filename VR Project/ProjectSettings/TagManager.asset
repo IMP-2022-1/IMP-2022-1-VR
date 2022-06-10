@@ -19,6 +19,7 @@ TagManager:
   - BossLever2
   - BossLever3
   - Boss
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Weapon
+  - Magazine
   - 
   - 
   - 

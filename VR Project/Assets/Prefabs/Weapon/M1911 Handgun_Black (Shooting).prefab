@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7146813663114223385}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Magazine_Location
-  m_TagString: Magazine
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3991182178854837434}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Barrel_Location
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3990955377663716942}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Ejection_Location
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 3998425275224658752}
   - component: {fileID: 4727989001137575674}
   - component: {fileID: 4727989001137575673}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: M1911 Handgun_Black (Shooting)
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 9071270060100608135}
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
   m_VelocityDamping: 1
@@ -293,9 +293,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4727988999757122093}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Attatch Point
-  m_TagString: Magazine
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,7 +323,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4727988999798352716}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: SliderTarget
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4727989000017005932}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4727989001078153135}
   - component: {fileID: 4727989001078153134}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: c2
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -402,7 +402,8 @@ Transform:
   m_LocalRotation: {x: -0.6130804, y: -0, z: -0, w: 0.7900205}
   m_LocalPosition: {x: 0, y: 0.0245, z: 0.0062}
   m_LocalScale: {x: 0.020520397, y: 0.052569587, z: 0.12025872}
-  m_Children: []
+  m_Children:
+  - {fileID: 9071270060100608135}
   m_Father: {fileID: 4727989000017005932}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -75.625, y: 0, z: 0}
@@ -430,9 +431,9 @@ GameObject:
   - component: {fileID: 4727989001554294187}
   - component: {fileID: 4727989001554294189}
   - component: {fileID: 4727989001554294188}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Sphere
-  m_TagString: Magazine
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -533,7 +534,7 @@ GameObject:
   - component: {fileID: 5572481128265614550}
   - component: {fileID: 5572481128265614546}
   - component: {fileID: 5572481128265614554}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Slider
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -936,7 +937,7 @@ GameObject:
   - component: {fileID: 3426181229974650018}
   - component: {fileID: 4727989000592549415}
   - component: {fileID: 5572481128265614548}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: M1911 Handgun_Model
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -1165,7 +1166,7 @@ GameObject:
   - component: {fileID: 5572481128265193717}
   - component: {fileID: 5572481128266520789}
   - component: {fileID: 5572481128267618837}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Hammer
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -1246,7 +1247,7 @@ GameObject:
   - component: {fileID: 5572481128265193719}
   - component: {fileID: 5572481128266520791}
   - component: {fileID: 5572481128267618839}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: CasingExit
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -1327,7 +1328,7 @@ GameObject:
   - component: {fileID: 5572481128265193727}
   - component: {fileID: 5572481128266520799}
   - component: {fileID: 5572481128267618847}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Trigger
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -1397,3 +1398,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6057614818481891854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9071270060100608135}
+  m_Layer: 6
+  m_Name: att
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9071270060100608135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6057614818481891854}
+  m_LocalRotation: {x: 0.60876137, y: 0, z: 0, w: 0.7933534}
+  m_LocalPosition: {x: 0, y: 0.047, z: 0.255}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4727989001078153135}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}

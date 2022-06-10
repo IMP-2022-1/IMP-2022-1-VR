@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5465262314307730831}
   - component: {fileID: 5465262314307730824}
   - component: {fileID: 5465262314307730830}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: M1911 Magazine_Black
   m_TagString: Magazine
   m_Icon: {fileID: 0}
@@ -191,8 +191,8 @@ GameObject:
   - component: {fileID: 5709260451360475368}
   - component: {fileID: 5709260451363375304}
   - component: {fileID: 5709260451362245128}
-  - component: {fileID: 5709260451360052431}
-  m_Layer: 6
+  - component: {fileID: 5383321997574304541}
+  m_Layer: 7
   m_Name: M1911 Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,8 +262,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5709260451360052431
-MeshCollider:
+--- !u!65 &5383321997574304541
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -272,7 +272,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 40ea87bfb6dc64349a6b3363f1955b6a, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.015, y: 0.1, z: 0.045}
+  m_Center: {x: 0, y: 0.048003625, z: 0.005399609}

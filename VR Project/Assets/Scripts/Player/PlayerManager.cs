@@ -57,7 +57,7 @@ public class PlayerManager : MonoBehaviour
         }*/
 
         SlashCard();
-        /*
+        
         if (playerHP == 3){
             bloodScreen.color = new Color(255, 0, 0, 0);
         }
@@ -70,7 +70,7 @@ public class PlayerManager : MonoBehaviour
             bloodScreen.color = new Color(255, 0, 0, 255);
 
         }
-        */
+        
         // Checking boss lever to destroy queen mosquito
         if (bossLever1 && bossLever2 && bossLever3)
         {

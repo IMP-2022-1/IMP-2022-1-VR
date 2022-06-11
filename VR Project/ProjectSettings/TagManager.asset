@@ -32,11 +32,11 @@ TagManager:
   - UI
   - Weapon
   - Magazine
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - MosquitoCollider
+  - Bullet
+  - Player
+  - Interactable Things
   - 
   - 
   - 

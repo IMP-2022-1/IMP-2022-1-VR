@@ -388,6 +388,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4727989001554294188, guid: 04645f495341d6a4ab79cca40816dd8a, type: 3}
+      propertyPath: m_ShowInteractableHoverMeshes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727989001554294188, guid: 04645f495341d6a4ab79cca40816dd8a, type: 3}
       propertyPath: m_StartingSelectedInteractable
       value: 
       objectReference: {fileID: 1633346065}

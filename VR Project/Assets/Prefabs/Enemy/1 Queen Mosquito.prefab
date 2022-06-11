@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 8302460784189343027}
   - component: {fileID: 8302460784189343029}
   - component: {fileID: 8302460784189343028}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: 1 Queen Mosquito
   m_TagString: Untagged
   m_Icon: {fileID: 0}

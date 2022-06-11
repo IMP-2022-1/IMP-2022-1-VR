@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4763393995787426751}
   - component: {fileID: 4763393995787426720}
   - component: {fileID: 4763393995787426721}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: 2 Ferocious Mosquito
   m_TagString: SmallEnemy
   m_Icon: {fileID: 0}

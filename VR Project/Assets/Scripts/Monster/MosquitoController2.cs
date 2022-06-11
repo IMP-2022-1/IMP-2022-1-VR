@@ -210,8 +210,11 @@ public class MosquitoController2 : MonoBehaviour
 
             if (TimeCheck < 2)
             {
-                if (Checked && animator.GetBool("Attack"))
-                    animator.SetBool("Attack", false);
+                if (isthereSuitableAnimator)
+                {
+                    if (Checked && animator.GetBool("Attack"))
+                        animator.SetBool("Attack", false);
+                }
 
                 TimeCheck += Time.deltaTime;
                 nvAgent.ResetPath();

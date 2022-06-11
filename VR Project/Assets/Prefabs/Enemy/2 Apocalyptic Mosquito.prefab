@@ -135,8 +135,8 @@ MonoBehaviour:
   HP: 1
   Damage: 1
   Speed: 0.3
-  TraceRange: 2
-  AttackRange: 0.3
+  TraceRange: 4
+  AttackRange: 0.5
   IdleEndPos: {fileID: 7893772433567737809}
 --- !u!1 &7893772434845796476
 GameObject:

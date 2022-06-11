@@ -23,6 +23,7 @@ TagManager:
   - Light
   - XROrigin
   - HolyBullet
+  - Setting
   layers:
   - Default
   - TransparentFX
@@ -37,7 +38,7 @@ TagManager:
   - Bullet
   - Player
   - Interactable Things
-  - 
+  - Mosquito Body
   - 
   - 
   - 

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MosquitoController2_1 : MosquitoController2
 {
+    // Bug Fix - Mosquito SetDestination Update
+    private bool haveIdleDestination;
+
     public override void whenOnEnable()
     {
         base.whenOnEnable();
@@ -21,11 +24,13 @@ public class MosquitoController2_1 : MosquitoController2
             IdleDestination = IdleEndPosPosition;
             IsDestinationIdleEnd = true;
         }
+
+        haveIdleDestination = false;
     }
 
     public override void UpdateIdle()
     {
-        Debug.Log("IdleMovement");
+        // Debug.Log("IdleMovement");
 
         if (MainCameraTransform == null)
         {
@@ -33,11 +38,15 @@ public class MosquitoController2_1 : MosquitoController2
             return;
         }
 
-        nvAgent.SetDestination(IdleDestination);
-        nvAgent.speed = Speed;
+        if (!haveIdleDestination)
+        {
+            haveIdleDestination = true;
 
-        Debug.Log(IdleDestination);
-        Debug.Log(nvAgent.remainingDistance);
+            StartCoroutine("CoSetD");
+        }
+
+        /* Debug.Log(IdleDestination);
+        Debug.Log(nvAgent.remainingDistance); */
 
         if (nvAgent.remainingDistance < 0.1)
         {
@@ -51,6 +60,8 @@ public class MosquitoController2_1 : MosquitoController2
                 IdleDestination = IdleEndPosPosition;
                 IsDestinationIdleEnd = true;
             }
+
+            haveIdleDestination = false;
         }
 
         float distance = (xz - transform.position).magnitude;
@@ -59,5 +70,13 @@ public class MosquitoController2_1 : MosquitoController2
             currentState = State.trace;
             return;
         }
+    }
+
+    IEnumerator CoSetD()
+    {
+        nvAgent.SetDestination(IdleDestination);
+        nvAgent.speed = Speed;
+
+        yield return null;
     }
 }

@@ -151,8 +151,8 @@ MonoBehaviour:
   HP: 1
   Damage: 1
   Speed: 0.3
-  TraceRange: 2
-  AttackRange: 0.3
+  TraceRange: 4
+  AttackRange: 0.5
   IdleEndPos: {fileID: 7001657635799175809}
 --- !u!1 &7001657635799175808
 GameObject:
@@ -263,19 +263,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5403233089870559552, guid: 914e41303c34f2a499673d11806c754a, type: 3}
   m_PrefabInstance: {fileID: 7001657635250828021}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7001657635351757191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2350054334838362383}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a1b7ebf6d6dd4847aabb3129b3799f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Destination: {fileID: 0}
 --- !u!82 &7743333842191941235
 AudioSource:
   m_ObjectHideFlags: 0
@@ -372,3 +359,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7001657635351757191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2350054334838362383}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1b7ebf6d6dd4847aabb3129b3799f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destination: {fileID: 0}

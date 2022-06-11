@@ -51,11 +51,13 @@ public class PlayerManager : MonoBehaviour
         // PlayerHPChecking In GameManager
 
         // Checking electricity
-        if (electricity)
+        /*if (electricity)
         {
             SlashCard();
-        }
+        }*/
 
+        SlashCard();
+        
         if (playerHP == 3){
             bloodScreen.color = new Color(255, 0, 0, 0);
         }
@@ -68,6 +70,7 @@ public class PlayerManager : MonoBehaviour
             bloodScreen.color = new Color(255, 0, 0, 255);
 
         }
+        
         // Checking boss lever to destroy queen mosquito
         if (bossLever1 && bossLever2 && bossLever3)
         {
@@ -84,7 +87,7 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("Right number pressed");
             audioSource.clip = rightNumberClip;
             audioSource.Play();
-            playerHP = 0;
+            GameObject.Find("DoorOpen").GetComponent<SecurityDoorOpen>().DoorOpen();
         }
         if (args.interactableObject.transform.CompareTag("WrongNumber"))
         {
@@ -113,19 +116,22 @@ public class PlayerManager : MonoBehaviour
     {
         GameObject usim = GameObject.FindGameObjectWithTag("Slot");
         GameObject card = GameObject.FindGameObjectWithTag("Card");
-        if (cardCheck)
+        if (usim != null && card != null)
         {
-            if (Vector3.Distance(usim.transform.position, card.transform.position) < 0.1f)
+            if (cardCheck)
             {
-                Debug.Log("Hologram appear!");
-                audioSource.clip = hologramClip;
-                audioSource.Play();
-                cardCheck = false;
-                hologram = Instantiate(hologramPrefab, usim.transform.position + new Vector3(-0.1f, 0, 0), usim.transform.rotation);
+                if (Vector3.Distance(usim.transform.position, card.transform.position) < 0.5f)
+                {
+                    Debug.Log("Hologram appear!");
+                    audioSource.clip = hologramClip;
+                    audioSource.Play();
+                    cardCheck = false;
+                    hologram = Instantiate(hologramPrefab, usim.transform.position + new Vector3(0, 0, -0.3f), usim.transform.rotation);
+                }
             }
         }
 
-        GameObject.Find("DoorOpen").GetComponent<SecurityDoorOpen>().DoorOpen();
+        
     }
 
     public void OnGrabLever(SelectEnterEventArgs args)

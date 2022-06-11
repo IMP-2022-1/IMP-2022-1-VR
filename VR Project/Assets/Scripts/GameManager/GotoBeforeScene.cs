@@ -25,7 +25,14 @@ public class GotoBeforeScene : MonoBehaviour
         else
         {
             Debug.Log("2");
-            SceneManager.LoadScene(GameManager.instance.BeforeSceneNumber);
+            if (GameManager.instance.BeforeSceneNumber != 1)
+            {
+                SceneManager.LoadScene(GameManager.instance.BeforeSceneNumber);
+            }
+            else
+            {
+                SceneManager.LoadScene("Floor 1_1");
+            }
         }
     }
 }

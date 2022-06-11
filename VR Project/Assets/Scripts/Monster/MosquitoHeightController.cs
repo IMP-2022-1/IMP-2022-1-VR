@@ -9,8 +9,8 @@ public class MosquitoHeightController : MonoBehaviour
 
     private void OnEnable()
     {
-        if (Destination == null)
-            Debug.Log("Please assign destination - if player : MainCamera");
+        /* if (Destination == null)
+            Debug.Log("Please assign destination - if player : MainCamera"); */
 
         mosquitoController = transform.parent.GetComponent<MosquitoController2>();
     }

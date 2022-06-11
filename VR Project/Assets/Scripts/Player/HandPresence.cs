@@ -94,7 +94,7 @@ public class HandPresence : MonoBehaviour
         }
         else
         {
-            // TestInputs();
+            TestInputs();
 
             // set controller / hand active/deactive
             spawnedHand.SetActive(!showController);
@@ -138,34 +138,37 @@ public class HandPresence : MonoBehaviour
 
         if (targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool pressed))
         {
-            Debug.Log("Primary pressed: " + pressed);
+            // Debug.Log("Primary pressed: " + pressed);
 
-            GameObject Setting = GameObject.Find("Setting");
+            GameObject Setting = GameObject.FindGameObjectWithTag("Setting");
 
-            if (Setting.activeInHierarchy == false)
+            if (Setting != null)
             {
-                Setting.SetActive(true);
+                if (Setting.activeInHierarchy == false)
+                {
+                    Setting.SetActive(true);
 
-                // Option Open
-                if (handModelPrefab.name == "Left Hand Model")
-                {
-                    Transform LeftHand = GameObject.Find("LeftHand Controller").transform.GetChild(0);
-                    Setting.transform.position = LeftHand.position + new Vector3(0.2f, 0, 0);
-                    Setting.transform.parent = LeftHand;
+                    // Option Open
+                    if (handModelPrefab.name == "Left Hand Model")
+                    {
+                        Transform LeftHand = GameObject.Find("LeftHand Controller").transform.GetChild(0);
+                        Setting.transform.position = LeftHand.position + new Vector3(0.2f, 0, 0);
+                        Setting.transform.parent = LeftHand;
+                    }
+                    else if (handModelPrefab.name == "Right hand Model")
+                    {
+                        Transform RightHand = GameObject.Find("RightHand Controller").transform.GetChild(0);
+                        Setting.transform.position = RightHand.position + new Vector3(-0.2f, 0, 0);
+                        Setting.transform.parent = RightHand;
+                    }
                 }
-                else if (handModelPrefab.name == "Right hand Model")
+                else
                 {
-                    Transform RightHand = GameObject.Find("RightHand Controller").transform.GetChild(0);
-                    Setting.transform.position = RightHand.position + new Vector3(-0.2f, 0, 0);
-                    Setting.transform.parent = RightHand;
+                    Setting.SetActive(false);
                 }
-            }
-            else
-            {
-                Setting.SetActive(false);
             }
         }
-        if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
+        /*if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
         {
             Debug.Log("Trigger value: " + triggerValue);
         }
@@ -180,6 +183,6 @@ public class HandPresence : MonoBehaviour
         if (targetDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 axisValue))   // primary : right hand, secondary : left hand
         {
             Debug.Log("Joystick value: " + axisValue);
-        }
+        }*/
     }
 }

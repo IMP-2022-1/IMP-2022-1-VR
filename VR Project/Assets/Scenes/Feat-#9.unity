@@ -979,6 +979,126 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
+--- !u!1 &905696250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000013096799518, guid: a51c654e6cbb42f4a84639b7fe9671b4, type: 3}
+  m_PrefabInstance: {fileID: 1526611879}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &905696251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905696250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 118241932}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_AttachTransform: {fileID: 0}
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 2
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 5
+  m_TightenPosition: 0.5
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 5
+  m_TightenRotation: 0.5
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
 --- !u!1 &908640687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,149 +1209,112 @@ MonoBehaviour:
   m_GameObject: {fileID: 952924481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 371bc76237eff4f43935fbd62ac86874, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _topology: 0
-  _detail: 10
-  _level: 0.8
-  _liquidColor1:
-    r: 0
-    g: 1
-    b: 0
-    a: 0.1
-  _liquidScale1: 1
-  _liquidColor2:
-    r: 1
-    g: 0
-    b: 0
-    a: 0.3
-  _liquidScale2: 5
-  _alpha: 1
-  _emissionColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
-  _emissionBrightness: 0
-  _ditherShadows: 1
-  _murkiness: 1
-  _turbulence1: 0.5
-  _turbulence2: 0.2
-  _frecuency: 1
-  _speed: 1
-  _sparklingIntensity: 0.1
-  _sparklingAmount: 0.2
-  _deepObscurance: 2
-  _foamColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 0.65
-  _foamScale: 0.2
-  _foamThickness: 0.04
-  _foamDensity: 0.5
-  _foamWeight: 10
-  _foamTurbulence: 1
-  _foamVisibleFromBottom: 1
-  _smokeEnabled: 1
-  _smokeColor:
-    r: 0.7
-    g: 0.7
-    b: 0.7
-    a: 0.25
-  _smokeScale: 0.25
-  _smokeBaseObscurance: 2
-  _smokeSpeed: 5
-  _fixMesh: 0
-  originalMesh: {fileID: 0}
-  originalPivotOffset: {x: 0, y: 0, z: 0}
-  _pivotOffset: {x: 0, y: 0, z: 0}
-  _upperLimit: 1.5
-  _lowerLimit: -1.5
-  _subMeshIndex: -1
-  _flaskTint:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
-  _flaskThickness: 0.03
-  _flaskGlossinessExternal: 0.767
-  _flaskGlossinessInternal: 0.5
-  _scatteringEnabled: 0
-  _scatteringPower: 5
-  _scatteringAmount: 0.3
-  _refractionBlur: 1
-  _blurIntensity: 0.75
-  _liquidRaySteps: 10
-  _foamRaySteps: 7
-  _smokeRaySteps: 5
-  _bumpMap: {fileID: 0}
-  _bumpDistortionScale: 1
-  _bumpDistortionOffset: {x: 0, y: 0}
-  _distortionMap: {fileID: 0}
-  _texture: {fileID: 0}
-  _textureScale: {x: 1, y: 1}
-  _textureOffset: {x: 0, y: 0}
-  _distortionAmount: 1
-  _depthAware: 0
-  _depthAwareOffset: 0
-  _depthAwareCustomPass: 0
-  _doubleSidedBias: 0.001
-  _rotationLevelBias: 0
-  _ignoreGravity: 0
-  _reactToForces: 0
-  _textureAlpha: 1
-  _extentsScale: {x: 1, y: 1, z: 1}
-  _noiseVariation: 1
-  _allowViewFromInside: 0
-  _debugSpillPoint: 0
-  _renderQueue: 3001
-  _reflectionTexture: {fileID: 0}
-  _physicsMass: 1
-  _physicsAngularDamp: 0.02
-  liqMat: {fileID: 0}
-  liqMatSimple: {fileID: 0}
-  liqMatDefault: {fileID: 0}
-  liqMatDefaultNoFlask: {fileID: 0}
-  liqMatBump: {fileID: 0}
-  liqMatReflections: {fileID: 0}
-  liqMatSmoke: {fileID: 0}
-  mesh: {fileID: 0}
-  mr: {fileID: 0}
-  wasRefractionBlur: 0
-  wasBackBuffer: 0
-  wasFrontBuffer: 0
-  lastPosition: {x: -0.31270975, y: 0.63, z: -0.34091276}
-  lastScale: {x: 0.25, y: 0.25, z: 0.25}
-  lastRotation: {x: 0, y: 0, z: 0, w: 1}
-  shaderKeywords: []
-  camInside: 0
-  lastDistanceToCam: 0
-  currentDetail: 10
-  turb: {x: 0, y: 0, z: 1, w: 0}
-  turbulenceSpeed: 1
-  liquidLevelPos: 0
-  shouldUpdateMaterialProperties: 0
-  verticesUnsorted: []
-  verticesSorted: []
-  rotatedVertices: []
-  verticesIndices: 
-  volumeRef: 0
-  lastLevelVolumeRef: 0
-  prevVelocity: {x: 0, y: 0, z: 0}
-  prev2Velocity: {x: 0, y: 0, z: 0}
-  inertia: {x: 0, y: 0, z: 0}
-  lastAvgVelocity: {x: 0, y: 0, z: 0}
-  angularVelocity: 0
-  angularInertia: 0
-  turbulenceDueForces: 0
-  liquidRot: {x: 0, y: 0, z: 0, w: 1}
-  prevThickness: 0.03
-  spillPointGizmo: {fileID: 0}
-  backBufferMat: {fileID: 0}
-  bbRenderers: []
-  backBufferRT: {fileID: 0}
+  m_InteractionManager: {fileID: 118241932}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_AttachTransform: {fileID: 0}
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 2
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 5
+  m_TightenPosition: 0.5
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 5
+  m_TightenRotation: 0.5
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
 --- !u!1 &1520172008
 GameObject:
   m_ObjectHideFlags: 0

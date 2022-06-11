@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 440f14e59378bf14e8ecc9ea38a5968f, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: eb7383b4de6b845459608059ff902e85, type: 2}
 --- !u!1 &3471871
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,11 +461,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 765e2fde8c84f094e99304c6198491ea, type: 3}
---- !u!4 &12958504 stripped
+--- !u!4 &12958504
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 400154, guid: 765e2fde8c84f094e99304c6198491ea, type: 3}
   m_PrefabInstance: {fileID: 12958503}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723229184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 256423137}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &14318904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18950,6 +18959,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721696589}
   m_Mesh: {fileID: 4300014, guid: 3fea548b7f76f974892d44d977e21f73, type: 3}
+--- !u!1 &1723229184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 100154, guid: 765e2fde8c84f094e99304c6198491ea, type: 3}
+  m_PrefabInstance: {fileID: 12958503}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 12958504}
+  m_Layer: 0
+  m_Name: 'SkelMesh_Bodyguard_02 (Missing Prefab with guid: 765e2fde8c84f094e99304c6198491ea)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &1727427242
 PrefabInstance:
   m_ObjectHideFlags: 0

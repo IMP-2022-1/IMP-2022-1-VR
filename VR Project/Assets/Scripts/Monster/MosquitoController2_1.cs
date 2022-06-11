@@ -32,17 +32,14 @@ public class MosquitoController2_1 : MosquitoController2
     {
         // Debug.Log("IdleMovement");
 
-        if (MainCameraTransform == null)
-        {
-            Debug.Log("Check MainCameraTransform");
-            return;
-        }
-
         if (!haveIdleDestination)
         {
             haveIdleDestination = true;
 
-            StartCoroutine("CoSetD");
+            nvAgent.SetDestination(IdleDestination);
+            nvAgent.speed = Speed;
+
+            // StartCoroutine("CoSetD");
         }
 
         /* Debug.Log(IdleDestination);

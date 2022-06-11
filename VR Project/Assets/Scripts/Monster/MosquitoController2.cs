@@ -98,7 +98,9 @@ public class MosquitoController2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xz = new Vector3(MainCameraTransform.position.x, 0, MainCameraTransform.position.z);
+        if (MainCameraTransform != null)
+            xz = new Vector3(MainCameraTransform.position.x, 0, MainCameraTransform.position.z);
+
         // transform.LookAt(xz);
         if (HP <= 0)
             currentState = State.dead;
@@ -271,22 +273,8 @@ public class MosquitoController2 : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player")) {
             checkCollision = true;
-            // collision.GetComponent<Component name that have Player's hp>().HP -= Damage
+            collision.transform.GetComponent<PlayerManager>().playerHP -= 1;
             // if you want to Haptic Vibrate, Insert.
-        }
-
-        if (collision.transform.CompareTag("Bullet"))
-        {
-            TraceRange = 5;
-            HP -= 0.4f;
-            currentState = State.heated;
-        }
-
-        if (collision. transform.CompareTag("HolyBullet"))
-        {
-            TraceRange = 5;
-            HP -= 1f;
-            currentState = State.heated;
         }
     }
 

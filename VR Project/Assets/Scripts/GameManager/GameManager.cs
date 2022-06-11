@@ -22,9 +22,10 @@ public class GameManager : MonoBehaviour
         // Object doesn't destroy even if scene change 
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(GameOverUI.gameObject);
-
+        DontDestroyOnLoad(GameObject.Find("XR Interaction Manager"));
 
         Player = GameObject.FindGameObjectWithTag("Player");
+        DontDestroyOnLoad(GameObject.FindGameObjectWithTag("XROrigin"));
 
         BeforeSceneNumber = -1;
         // SceneChange(Loaded) Event
@@ -34,9 +35,11 @@ public class GameManager : MonoBehaviour
     // If SceneLoading -> Re-Assign Player
     private void LoadedSceneEvent (Scene scene, LoadSceneMode mode)
     {
-        // Re Assign Player.
-        Player = GameObject.FindGameObjectWithTag("Player");
-        Player.transform.parent.parent.transform.position = GameObject.Find("SpawnPosition").transform.position;
+        /* // Re Assign Player.
+        Player = GameObject.FindGameObjectWithTag("Player"); */
+
+        Player.transform.parent.parent.transform.position = GameObject.Find("SpawnPosition").transform.position; 
+        Player.GetComponent<PlayerManager>().playerHP = 3;
     }
 
     // Start is called before the first frame update

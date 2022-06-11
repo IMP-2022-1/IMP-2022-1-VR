@@ -20,6 +20,9 @@ TagManager:
   - BossLever3
   - Boss
   - Ground
+  - Light
+  - XROrigin
+  - HolyBullet
   layers:
   - Default
   - TransparentFX

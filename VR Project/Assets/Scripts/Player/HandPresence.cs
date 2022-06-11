@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.XR;
 public class HandPresence : MonoBehaviour
 {
+    public GameObject OptionB;
+
     private InputDevice targetDevice; // store device we use
 
     [SerializeField]
@@ -48,7 +50,7 @@ public class HandPresence : MonoBehaviour
             targetDevice = devices[0];
 
             // instantiate controller prefab
-            GameObject controller = controllerPrefabs.Find(ctrl => ctrl.name == targetDevice.name); // ¸ðµç ¸®½ºÆ® µ¹¸é¼­ controller.nameÇÏ°í targerDevice.nameÇÏ°í ¸ÅÄªÇØº¸°í ¸ÂÀ¸¸é return °ªÀ¸·Î µ¹·ÁÁØ´Ù.
+            GameObject controller = controllerPrefabs.Find(ctrl => ctrl.name == targetDevice.name); // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½é¼­ controller.nameï¿½Ï°ï¿½ targerDevice.nameï¿½Ï°ï¿½ ï¿½ï¿½Äªï¿½Øºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø´ï¿½.
 
             if (controller != null)
             {
@@ -63,7 +65,7 @@ public class HandPresence : MonoBehaviour
         if(spawnedHand == null)
         {
             // spawn the hand
-            spawnedHand = Instantiate(handModelPrefab, transform);  // ±×³É transform
+            spawnedHand = Instantiate(handModelPrefab, transform);  // ï¿½×³ï¿½ transform
 
             // get an animator
             handAnimator = spawnedHand.GetComponent<Animator>();
@@ -137,6 +139,31 @@ public class HandPresence : MonoBehaviour
         if (targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool pressed))
         {
             Debug.Log("Primary pressed: " + pressed);
+
+            GameObject Setting = GameObject.Find("Setting");
+
+            if (Setting.activeInHierarchy == false)
+            {
+                Setting.SetActive(true);
+
+                // Option Open
+                if (handModelPrefab.name == "Left Hand Model")
+                {
+                    Transform LeftHand = GameObject.Find("LeftHand Controller").transform.GetChild(0);
+                    Setting.transform.position = LeftHand.position + new Vector3(0.2f, 0, 0);
+                    Setting.transform.parent = LeftHand;
+                }
+                else if (handModelPrefab.name == "Right hand Model")
+                {
+                    Transform RightHand = GameObject.Find("RightHand Controller").transform.GetChild(0);
+                    Setting.transform.position = RightHand.position + new Vector3(-0.2f, 0, 0);
+                    Setting.transform.parent = RightHand;
+                }
+            }
+            else
+            {
+                Setting.SetActive(false);
+            }
         }
         if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
         {

@@ -30,7 +30,7 @@ public class MosquitoController2_1 : MosquitoController2
 
     public override void UpdateIdle()
     {
-        Debug.Log("IdleMovement");
+        // Debug.Log("IdleMovement");
 
         if (MainCameraTransform == null)
         {

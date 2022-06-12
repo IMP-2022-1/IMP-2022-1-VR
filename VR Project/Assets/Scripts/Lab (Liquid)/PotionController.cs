@@ -20,6 +20,7 @@ public class PotionController : MonoBehaviour
     void Update() {
         if (ready && ready2 && !start) {
             StartCoroutine("PotionEnded");
+            GameObject.Find("checkedDisplayOn").GetComponent<VideoLab>().QuizTwo();
             start = true;
         }
     }

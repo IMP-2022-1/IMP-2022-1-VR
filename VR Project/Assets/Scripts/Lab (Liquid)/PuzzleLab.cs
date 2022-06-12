@@ -159,7 +159,7 @@ public class PuzzleLab : MonoBehaviour
         BlueArea.GetComponent<TextMeshProUGUI>().text = blue.ToString();
 
         if (red == 4 || blue == 4) {
-            // 문제 해결 코드 작성
+            // 문제 해결시 보상 코드 작성
         }
     }
     

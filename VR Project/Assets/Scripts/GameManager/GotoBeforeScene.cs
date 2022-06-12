@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GotoBeforeScene : MonoBehaviour
 {
+    public GameObject RGameOverUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class GotoBeforeScene : MonoBehaviour
         else
         {
             Debug.Log("2");
+            
             if (GameManager.instance.BeforeSceneNumber != 1)
             {
                 SceneManager.LoadScene(GameManager.instance.BeforeSceneNumber);
@@ -33,6 +36,9 @@ public class GotoBeforeScene : MonoBehaviour
             {
                 SceneManager.LoadScene("Floor 1_1");
             }
+
+            RGameOverUI.SetActive(false);
+            GameObject.Find("BloodScreen").SetActive(true);
         }
     }
 }

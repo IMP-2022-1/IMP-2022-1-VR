@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     // What Doing Player and GameManager Object go other Scene?
 
     public Canvas GameOverUI;
+    public Canvas RGameOverUI;
     private bool GameOverOnceChecked;
     public int BeforeSceneNumber;
 
@@ -89,6 +90,8 @@ public class GameManager : MonoBehaviour
         GameOverUI.gameObject.SetActive(false);
 
         // Check GameOver Scene name is "GameOver"
+        GameObject.Find("BloodScreen").SetActive(false);
+        RGameOverUI.gameObject.SetActive(true);
         SceneManager.LoadScene("GameOver");
     }
 }

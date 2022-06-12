@@ -54,6 +54,7 @@ public class ElevatorSceneChange : MonoBehaviour
 
     IEnumerator ToNextFloor()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().cardCheck = true;
 
         Image BlackImage = GameOverUI.transform.GetChild(0).GetComponent<Image>();
         Color ImageColor = BlackImage.color;

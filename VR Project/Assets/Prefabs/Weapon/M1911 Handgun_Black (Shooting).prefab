@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7146813663114223385}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Magazine_Location
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3991182178854837434}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Barrel_Location
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3990955377663716942}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ejection_Location
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -102,7 +102,8 @@ GameObject:
   - component: {fileID: 3998425275224658752}
   - component: {fileID: 4727989001137575674}
   - component: {fileID: 4727989001137575673}
-  m_Layer: 6
+  - component: {fileID: 83240905720909603}
+  m_Layer: 12
   m_Name: M1911 Handgun_Black (Shooting)
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -199,6 +200,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 83240905720909603}
+        m_TargetAssemblyTypeName: GetWeaponParent, Assembly-CSharp
+        m_MethodName: GetParent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -282,8 +295,20 @@ MonoBehaviour:
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
-  m_RetainTransformParent: 1
+  m_RetainTransformParent: 0
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &83240905720909603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993028974957589814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4bf2b87e57e204b8d4e1a4bbb376ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4727988999757122092
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4727988999757122093}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Attatch Point
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -323,7 +348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4727988999798352716}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: SliderTarget
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -353,7 +378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4727989000017005932}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Collider
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -385,7 +410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4727989001078153135}
   - component: {fileID: 4727989001078153134}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: c2
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -431,7 +456,7 @@ GameObject:
   - component: {fileID: 4727989001554294187}
   - component: {fileID: 4727989001554294189}
   - component: {fileID: 4727989001554294188}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Sphere
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -534,7 +559,7 @@ GameObject:
   - component: {fileID: 5572481128265614550}
   - component: {fileID: 5572481128265614546}
   - component: {fileID: 5572481128265614554}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Slider
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -937,7 +962,7 @@ GameObject:
   - component: {fileID: 3426181229974650018}
   - component: {fileID: 4727989000592549415}
   - component: {fileID: 5572481128265614548}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: M1911 Handgun_Model
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -1166,7 +1191,7 @@ GameObject:
   - component: {fileID: 5572481128265193717}
   - component: {fileID: 5572481128266520789}
   - component: {fileID: 5572481128267618837}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Hammer
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -1247,7 +1272,7 @@ GameObject:
   - component: {fileID: 5572481128265193719}
   - component: {fileID: 5572481128266520791}
   - component: {fileID: 5572481128267618839}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: CasingExit
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -1328,7 +1353,7 @@ GameObject:
   - component: {fileID: 5572481128265193727}
   - component: {fileID: 5572481128266520799}
   - component: {fileID: 5572481128267618847}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Trigger
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -1407,7 +1432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9071270060100608135}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: att
   m_TagString: Untagged
   m_Icon: {fileID: 0}

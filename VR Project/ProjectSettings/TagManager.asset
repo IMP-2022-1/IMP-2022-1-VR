@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - SmallEnemy
+  - Card
+  - Security
+  - WrongNumber
+  - RightNumber
+  - Magazine
+  - Weapon
+  - Bullet
+  - Slot
+  - WrongLever
+  - RightLever
+  - BossLever1
+  - BossLever2
+  - BossLever3
+  - Boss
+  - Ground
+  - Light
+  - XROrigin
+  - HolyBullet
+  - Setting
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Weapon
+  - Magazine
+  - Ground
+  - MosquitoCollider
+  - Bullet
+  - Player
+  - Interactable Things
+  - Mosquito Body
+  - Hand
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

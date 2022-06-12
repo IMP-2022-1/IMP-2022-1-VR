@@ -14,6 +14,10 @@
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
 
+#ignore Samples
+/[Aa]ssets/Example/
+/[Aa]ssets/Hands/
+
 # Recordings can get excessive in size
 /[Rr]ecordings/
 

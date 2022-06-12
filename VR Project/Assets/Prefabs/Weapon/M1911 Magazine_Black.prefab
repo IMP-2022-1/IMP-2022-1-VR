@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5465262314307730831}
   - component: {fileID: 5465262314307730824}
   - component: {fileID: 5465262314307730830}
-  - component: {fileID: 1594711762107347778}
   m_Layer: 7
   m_Name: M1911 Magazine_Black
   m_TagString: Magazine
@@ -181,18 +180,6 @@ MonoBehaviour:
   numOfAmmo: 8
   magazineInventory: {fileID: 6834685007087932255, guid: 28db432615c0ac542afc22a41b4a2a9f, type: 3}
   gunPrefab: {fileID: 0}
---- !u!114 &1594711762107347778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5465262314307730825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f4bf2b87e57e204b8d4e1a4bbb376ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5709260451360052424
 GameObject:
   m_ObjectHideFlags: 0

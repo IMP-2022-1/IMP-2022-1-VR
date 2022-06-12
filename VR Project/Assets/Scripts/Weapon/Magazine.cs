@@ -11,7 +11,6 @@ public class Magazine : MonoBehaviour
     void Start()
     {
         gunPrefab = GameObject.Find("M1911 Handgun_Model").GetComponent<SimpleShoot>();
-        magazineInventory = GameObject.Find("Socket(ManagizeOnly)").GetComponent<SocketTag>();
     }
 
     void Update()
@@ -29,8 +28,7 @@ public class Magazine : MonoBehaviour
         {
             if (magazineInventory.selectTarget == null && gunPrefab.getWeapon)
             {
-                Debug.Log("Magazine resupply");
-                transform.position = magazineInventory.gameObject.transform.position;
+                transform.position = magazineInventory.transform.position;
                 numOfAmmo = 8;
             }
         }

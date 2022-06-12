@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviour
     public int playerHP = 3;
 
     private bool electricity;
-    public bool cardCheck;
+    private bool cardCheck;
     public GameObject hologramPrefab;
     private GameObject hologram;
 

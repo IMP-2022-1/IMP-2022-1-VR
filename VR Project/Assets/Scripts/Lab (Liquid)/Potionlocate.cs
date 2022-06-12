@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class Potionlocate : MonoBehaviour
 {
@@ -25,5 +27,7 @@ public class Potionlocate : MonoBehaviour
     void PotionMove(Transform pos, GameObject target) {
         target.transform.position = pos.position;
         target.transform.rotation = Quaternion.Euler(0,0,0);
+        target.transform.parent = this.transform;
+        Destroy(target.GetComponent<XRGrabInteractable>());
     }
 }

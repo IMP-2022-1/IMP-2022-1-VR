@@ -10,6 +10,9 @@ public class PotionController : MonoBehaviour
     [SerializeField]
     private Transform PotionCeiling;
 
+    [SerializeField]
+    private Transform Display;
+
     public bool ready = false;
     public bool ready2 = false;
     public bool start = false;
@@ -25,6 +28,7 @@ public class PotionController : MonoBehaviour
         for (int i = 0; i < 130 ; i++) {
             PotionCeiling.position += new Vector3(0.01f, 0, 0);
             PotionArea.position -= new Vector3(0, 0.006f, 0);
+            Display.position -= new Vector3(0, 0.025f, 0);
             yield return new WaitForSeconds(0.005f);
         }
         

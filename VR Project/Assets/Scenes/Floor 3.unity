@@ -3183,8 +3183,8 @@ GameObject:
   - component: {fileID: 1313875801}
   - component: {fileID: 1313875804}
   - component: {fileID: 1313875803}
-  - component: {fileID: 1313875802}
   - component: {fileID: 1313875805}
+  - component: {fileID: 1313875802}
   m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
@@ -3206,8 +3206,8 @@ Transform:
   m_Father: {fileID: 355597699}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1313875802
-MeshCollider:
+--- !u!65 &1313875802
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3216,10 +3216,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: -0.00000010430813, y: 0.00000008821371, z: 0.0000009536743}
 --- !u!23 &1313875803
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4542,8 +4541,8 @@ GameObject:
   - component: {fileID: 1901301577}
   - component: {fileID: 1901301580}
   - component: {fileID: 1901301579}
-  - component: {fileID: 1901301578}
   - component: {fileID: 1901301581}
+  - component: {fileID: 1901301578}
   m_Layer: 8
   m_Name: Ground (4)
   m_TagString: Untagged
@@ -4565,8 +4564,8 @@ Transform:
   m_Father: {fileID: 355597699}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1901301578
-MeshCollider:
+--- !u!65 &1901301578
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4575,10 +4574,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0.000000035390258, y: 0, z: 0}
 --- !u!23 &1901301579
 MeshRenderer:
   m_ObjectHideFlags: 0

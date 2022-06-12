@@ -1801,6 +1801,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RedArea: {fileID: 1928522800}
   BlueArea: {fileID: 97608702}
+  Red: {fileID: 1753043480}
+  Blue: {fileID: 632471190}
 --- !u!64 &316444491
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3436,6 +3438,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4596888441288056, guid: 2e20a9d5d499bdb47989d3e52387e91b, type: 3}
   m_PrefabInstance: {fileID: 619765788}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &632471190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000013096799518, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
+  m_PrefabInstance: {fileID: 770067163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &650784784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100018, guid: dfa43203af9b68c49ab4b0dd7429dbfb, type: 3}
@@ -3950,7 +3957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013096799518, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_Name
-      value: Potion1
+      value: Potion Blue
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_RootOrder
@@ -3958,7 +3965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.10000003
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_LocalScale.y
@@ -3966,7 +3973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3600001
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3978,7 +3985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3986,15 +3993,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5337,7 +5344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013096799518, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_Name
-      value: Potion1 (1)
+      value: Potion Red
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_RootOrder
@@ -5353,7 +5360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9496,6 +9503,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000010765243264, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
   m_PrefabInstance: {fileID: 1710477087}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1753043480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000013096799518, guid: ba7855e97339d3d498ed6511b8b583cd, type: 3}
+  m_PrefabInstance: {fileID: 972356594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1760015480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9020957050959232414, guid: 073ccbd54cb02f845842e76db5871483, type: 3}
@@ -11573,6 +11585,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5985778439048617070, guid: 2be8846571094ed479acd5493b280145, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc22acf10f7d0674c884b9e65d10fe55, type: 2}
     m_RemovedComponents:
     - {fileID: 5985778439048617067, guid: 2be8846571094ed479acd5493b280145, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2be8846571094ed479acd5493b280145, type: 3}

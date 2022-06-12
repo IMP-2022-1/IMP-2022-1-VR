@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     // What Doing Player and GameManager Object go other Scene?
 
     public Canvas GameOverUI;
+    public Canvas RGameOverUI;
     private bool GameOverOnceChecked;
     public int BeforeSceneNumber;
 
@@ -40,6 +41,13 @@ public class GameManager : MonoBehaviour
 
         Player.transform.parent.parent.transform.position = GameObject.Find("SpawnPosition").transform.position; 
         Player.GetComponent<PlayerManager>().playerHP = 3;
+        if(GameObject.Find("M1911 Handgun_Model").GetComponent<SimpleShoot>().getWeapon)
+        {
+            GameObject.Find("M1911 Handgun_Black (Shooting)").transform.position = GameObject.Find("Socket(WeaponOnly)").transform.position;
+            GameObject.Find("M1911 Magazine_Black").transform.position = GameObject.Find("Socket(WeaponOnly)").transform.position;
+            GameObject.Find("M1911 Magazine_Black (1)").transform.position = GameObject.Find("Socket(ManagizeOnly)").transform.position;
+        }
+
     }
 
     // Start is called before the first frame update
@@ -89,6 +97,8 @@ public class GameManager : MonoBehaviour
         GameOverUI.gameObject.SetActive(false);
 
         // Check GameOver Scene name is "GameOver"
+        GameObject.Find("BloodScreen").SetActive(false);
+        RGameOverUI.gameObject.SetActive(true);
         SceneManager.LoadScene("GameOver");
     }
 }

@@ -3145,6 +3145,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1063007449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063007447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd13b2d4c44c004f98b6a0c6e29ffcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RedPos: {fileID: 6628641765962237726}
+  BluePos: {fileID: 1063007451}
 --- !u!4 &1063007451 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447816266469823398, guid: 5fcbc74e005437747b9c4da784ad3c7d, type: 3}
@@ -3386,8 +3400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f664f34cbe1a8094f9a50b15d631ff3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RedPos: {fileID: 6628641765962237726}
-  BluePos: {fileID: 1063007451}
   PotionArea: {fileID: 1122843391}
   PotionCeiling: {fileID: 1082867239}
   ready: 0
@@ -6413,6 +6425,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &6628641765962237724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6628641765962237722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd13b2d4c44c004f98b6a0c6e29ffcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RedPos: {fileID: 6628641765962237726}
+  BluePos: {fileID: 1063007451}
 --- !u!4 &6628641765962237726 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447816266469823398, guid: 5fcbc74e005437747b9c4da784ad3c7d, type: 3}

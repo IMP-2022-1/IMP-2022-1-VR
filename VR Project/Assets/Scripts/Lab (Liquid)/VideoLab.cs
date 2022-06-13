@@ -11,6 +11,7 @@ public class VideoLab : MonoBehaviour
   private VideoPlayer video2;
 
   private GameObject Player;
+  private bool playChecked = false;
 
   void Start() {
       Player = GameObject.Find("XR Origin");
@@ -38,7 +39,9 @@ public class VideoLab : MonoBehaviour
 
   void Update() {
       Collider[] colls = Physics.OverlapSphere(transform.position, .4f);
-      if (colls.Length > 0)
-        StartCoroutine(One());
+      if (colls.Length > 0 && !playChecked) {
+            StartCoroutine(One());
+            playChecked = true;
+        }
   }
 }

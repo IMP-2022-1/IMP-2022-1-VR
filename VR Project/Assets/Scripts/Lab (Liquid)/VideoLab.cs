@@ -37,7 +37,7 @@ public class VideoLab : MonoBehaviour
   }
 
   void Update() {
-      Collider[] colls = Physics.OverlapSphere(transform.position, .25f);
+      Collider[] colls = Physics.OverlapSphere(transform.position, .4f);
       if (colls.Length > 0)
         StartCoroutine(One());
   }

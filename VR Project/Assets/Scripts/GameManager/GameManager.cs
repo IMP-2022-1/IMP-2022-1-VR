@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     private bool GameOverOnceChecked;
     public int BeforeSceneNumber;
 
+    public GameObject BloodScreen;
+
     private void Awake()
     {
         // Object doesn't destroy even if scene change 
@@ -97,7 +99,7 @@ public class GameManager : MonoBehaviour
         GameOverUI.gameObject.SetActive(false);
 
         // Check GameOver Scene name is "GameOver"
-        GameObject.Find("BloodScreen").SetActive(false);
+        BloodScreen.SetActive(false);
         RGameOverUI.gameObject.SetActive(true);
         SceneManager.LoadScene("GameOver");
     }

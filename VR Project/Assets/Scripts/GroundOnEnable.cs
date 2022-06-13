@@ -16,6 +16,9 @@ public class GroundOnEnable : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
+            transform.GetChild(i).GetComponent<TeleportationArea>().interactionManager
+                = GameObject.Find("XR Interaction Manager").GetComponent<XRInteractionManager>();
+
             transform.GetChild(i).GetComponent<TeleportationArea>().teleportationProvider 
                 = GameObject.FindGameObjectWithTag("XROrigin").GetComponent<TeleportationProvider>();
         }
@@ -26,6 +29,9 @@ public class GroundOnEnable : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
+            transform.GetChild(i).GetComponent<TeleportationArea>().interactionManager
+                = GameObject.Find("XR Interaction Manager").GetComponent<XRInteractionManager>();
+
             transform.GetChild(i).GetComponent<TeleportationArea>().teleportationProvider
                 = GameObject.FindGameObjectWithTag("XROrigin").GetComponent<TeleportationProvider>();
         }

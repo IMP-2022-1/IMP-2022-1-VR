@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GotoBeforeScene : MonoBehaviour
 {
     public GameObject RGameOverUI;
+    public GameObject BloodScreen;
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +40,7 @@ public class GotoBeforeScene : MonoBehaviour
             }
 
             RGameOverUI.SetActive(false);
-            GameObject.Find("BloodScreen").SetActive(true);
+            BloodScreen.SetActive(true);
         }
     }
 }

@@ -22,9 +22,8 @@ public class ElevatorSceneChange : MonoBehaviour
     {
         if (GameOverUI == null)
         {
-            if(GameObject.Find("GameOverUI") != null)
-                GameOverUI = GameObject.Find("GameOverUI").GetComponent<Canvas>();
-        }
+            GameOverUI = GameObject.Find("GameManager").transform.GetChild(2).GetComponent<Canvas>();
+    }
     }
 
     private void OnTriggerStay(Collider other)

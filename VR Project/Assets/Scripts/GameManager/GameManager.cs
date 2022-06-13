@@ -9,12 +9,14 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public enum GameStatus { Start, Play, Die }
 
+    public GameObject RGameOverUI;
+
     public GameObject Player;
     // Assgin XR Origin OR Player Object
     // What Doing Player and GameManager Object go other Scene?
 
     public Canvas GameOverUI;
-    public Canvas RGameOverUI;
+    public Canvas BloodScreen;
     private bool GameOverOnceChecked;
     public int BeforeSceneNumber;
 
@@ -90,7 +92,7 @@ public class GameManager : MonoBehaviour
         GameOverUI.gameObject.SetActive(false);
 
         // Check GameOver Scene name is "GameOver"
-        GameObject.Find("BloodScreen").SetActive(false);
+        BloodScreen.SetActive(false);
         RGameOverUI.gameObject.SetActive(true);
         SceneManager.LoadScene("GameOver");
     }

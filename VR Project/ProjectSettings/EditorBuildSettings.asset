@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScenes/TestGameManagerAndUI.unity
     guid: 61163be703178e54ba0a01aacac81bb1
   - enabled: 1
+    path: Assets/Scenes/Prologue.unity
+    guid: 0dabc4160850fb340bfc414db7f96a71
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 756c9eeb6a322484188b7f3849c84036
   - enabled: 1

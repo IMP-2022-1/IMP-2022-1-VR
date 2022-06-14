@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject BloodScreen;
 
+    public bool sceneChangerClicked = false;
+    private bool firstEnter = true;
+    
+
     private void Awake()
     {
         // Object doesn't destroy even if scene change 
@@ -43,12 +47,15 @@ public class GameManager : MonoBehaviour
 
         Player.transform.parent.parent.transform.position = GameObject.Find("SpawnPosition").transform.position; 
         Player.GetComponent<PlayerManager>().playerHP = 3;
+
         if(GameObject.Find("M1911 Handgun_Model").GetComponent<SimpleShoot>().getWeapon)
         {
-            GameObject.Find("M1911 Handgun_Black (Shooting)").transform.position = GameObject.Find("Socket(WeaponOnly)").transform.position;
-            GameObject.Find("M1911 Magazine_Black").transform.position = GameObject.Find("Socket(WeaponOnly)").transform.position;
-            GameObject.Find("M1911 Magazine_Black (1)").transform.position = GameObject.Find("Socket(ManagizeOnly)").transform.position;
+            GameObject.Find("M1911 Handgun_Black (Shooting)").transform.position = GameObject.Find("Player").transform.position + new Vector3(0, 1,0);
+            GameObject.Find("M1911 Magazine_Black").transform.position = GameObject.Find("Socket(WeaponOnly)").transform.position + new Vector3(0, 1, 0);
+            GameObject.Find("M1911 Magazine_Black (1)").transform.position = GameObject.Find("Socket(ManagizeOnly)").transform.position + new Vector3(0, 1, 0);
         }
+
+        StartMenu();
 
     }
 
@@ -102,5 +109,56 @@ public class GameManager : MonoBehaviour
         BloodScreen.SetActive(false);
         RGameOverUI.gameObject.SetActive(true);
         SceneManager.LoadScene("GameOver");
+    }
+
+    public void SceneChanger(int sceneNum)
+    {
+        if(sceneNum == 2)
+        {
+            GameObject.Find("M1911 Handgun_Black (Shooting)").transform.GetComponent<GetWeaponParent>().GetParent();
+            GameObject.Find("M1911 Handgun_Model").GetComponent<SimpleShoot>().GetWeaponFirst();
+            SceneManager.LoadScene("Floor 2");
+        }
+        else if(sceneNum == 3)
+        {
+            GameObject.Find("M1911 Handgun_Black (Shooting)").transform.GetComponent<GetWeaponParent>().GetParent();
+            GameObject.Find("M1911 Handgun_Model").GetComponent<SimpleShoot>().GetWeaponFirst();
+            SceneManager.LoadScene("Floor 3");
+        }
+
+    }
+
+    public void StartMenu()
+    {
+        if(firstEnter == true )
+        {
+            firstEnter = false;
+            Time.timeScale = 0.0f;
+        }
+    }
+
+    public void StartGame()
+    {
+        GameObject.Find("dropDownSceneSelect").gameObject.SetActive(false);
+        Time.timeScale = 1.0f;
+    }
+
+    public void CheckBtnClick()
+    {
+        switch (GameObject.Find("dropDownSceneSelect").GetComponentInChildren<Dropdown>().value)
+        {
+            case 0:
+                GameObject.Find("dropDownSceneSelect").gameObject.SetActive(false);
+                Time.timeScale = 1.0f;
+                break;
+            case 1:
+                Time.timeScale = 1.0f;
+                SceneChanger(2);
+                break;
+            case 2:
+                Time.timeScale = 1.0f;
+                SceneChanger(3);
+                break;
+        }
     }
 }

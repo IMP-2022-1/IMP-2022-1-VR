@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.UI;
 
-
 public class PlayerManager : MonoBehaviour
 {
     public int playerHP = 3;
@@ -32,6 +31,8 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
+
         electricity = false;
         cardCheck = true;
 
@@ -196,4 +197,5 @@ Application.Quit();
         }
 
     }
+    
 }

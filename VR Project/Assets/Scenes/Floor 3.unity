@@ -764,6 +764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossLever3
       objectReference: {fileID: 0}
+    - target: {fileID: 6605129486735280015, guid: 52f6d2ebbfa6fe243bc120300771a495, type: 3}
+      propertyPath: m_TagString
+      value: BossLever3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f6d2ebbfa6fe243bc120300771a495, type: 3}
 --- !u!4 &358941337 stripped
@@ -2332,6 +2336,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3926989877089620656, guid: eec87dbd91881fb4c9a529f548e469fa, type: 3}
       propertyPath: m_Name
+      value: BossLever1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926989877089620656, guid: eec87dbd91881fb4c9a529f548e469fa, type: 3}
+      propertyPath: m_TagString
       value: BossLever1
       objectReference: {fileID: 0}
     - target: {fileID: 3926989877089620657, guid: eec87dbd91881fb4c9a529f548e469fa, type: 3}
@@ -5136,6 +5144,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2381114814753066318, guid: a6d2ee8dfe318714db4c88f9de05e363, type: 3}
       propertyPath: m_Name
+      value: BossLever2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381114814753066318, guid: a6d2ee8dfe318714db4c88f9de05e363, type: 3}
+      propertyPath: m_TagString
       value: BossLever2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
